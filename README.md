@@ -8,20 +8,10 @@ In the listing of directories, delete anything that isn't relevant to your
 project.
 -->
 
-# COLLABORATOR PROJECT_NAME Project
+# Claire Graves' (et al.) Endocrine Surgery Access Project
 
 This repository contains code for Claire Graves' **Endocrine Surgery Access** project. The
 project uses surgeon address data as well as population, demographic, and socioeconomic data from the US Census to understand the distribution of endocrine surgeons in relation to the US population. The goal of our collaboration is is to better understand the distribution of endocrine surgery centers in the United States and who has access to these centers.  The larger goal of this work is to reduce the barriers for patients to access care requiring an endocrine surgeon.
-
-## [Google Drive](https://drive.google.com/drive/u/1/folders/1POVnOPgrcC_XViM0zDdMv2O-9B8ixRGT) File and Directory Structure
-
-```
-data/                                         Data sets
-support_documents/                            Project proposal, collaboration agreement, scoping document, etc.
-weekly_updates/                               Weekly progress reports from the DataLab team
-meeting_notes_graves_2022_endocrine_surgery   Running meeting notes
-
-```
 
 
 ## GitHub Repository File and Directory Structure
@@ -45,3 +35,18 @@ The files in the `data/` directory are:
 
 ```
 -->
+
+
+## Google Drive File and Directory Structure
+
+Data and supporting documents for this project will be stored in a [Google Drive](https://drive.google.com/drive/u/1/folders/1POVnOPgrcC_XViM0zDdMv2O-9B8ixRGT) folder on DataLab's account.
+
+The directory stucture for the files on Google Drive is:
+
+```
+data/                                         Data sets
+support_documents/                            Project proposal, collaboration agreement, scoping document, etc.
+weekly_updates/                               Weekly progress reports from the DataLab team
+meeting_notes_graves_2022_endocrine_surgery   Running meeting notes
+
+```
