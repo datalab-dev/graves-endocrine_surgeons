@@ -19,7 +19,8 @@ addresses_raw<-read.csv(
 
 
 
-# Analysis ----------------------------------------------------------------
+# Isochrone ----------------------------------------------------------------
+# This code uses the Valhalla Isochrone API. Valhalla is running in a local Docker container.
 
 # just UCD Medical Center
 ucd<-addresses_raw[which(addresses_raw$last_name == 'Graves'),]
@@ -40,17 +41,21 @@ api_response<-GET(url)
 isochrone<-geojson_sf(rawToChar(api_response$content))
 
 # plot it to prove it
-ucd_point<-st_as_sf(ucd, coords = c("Longitude", "Latitude"), 
-                    crs = 4326)
-plot(isochrone$geometry)
-plot(ucd_point, add=TRUE)
+ucd_point<-st_as_sf(ucd, coords = c("Longitude", "Latitude"), crs = 4326)
 
 
+# Isoline (Buffer) --------------------------------------------------------
 # compare isochrone with isoline (buffer)
 
+# first, all the data needs to be in projected coordinate system
 ucd_point_3310<-st_transform(ucd_point, 3310)
 isochrone_3310<-st_transform(isochrone, 3310)
+
+# calculate the buffer in meters, the native units of the coordinate system
 ucd_100<-st_buffer(ucd_point_3310, 160934) #buffer of ~100 miles
+
+
+# Plots -------------------------------------------------------------------
 
 # plot with base R
 plot(ucd_100$geometry)
