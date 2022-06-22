@@ -10,6 +10,8 @@ library(geojsonsf)
 #library(jsonlite)
 
 # Load Data
+
+# Address Data
 addresses_raw<-read.csv(
   file="D:/Graves_Endocrine_Surgery/data/address/geocoded_addresses_geocodio_2022-06-16.csv",
   header=T,
@@ -17,6 +19,8 @@ addresses_raw<-read.csv(
   stringsAsFactors=F
 )
 
+# Road Data - for visualization (not routing)
+roads<-st_read('C:\\Users\\mmtobias\\Box\\D Drive\\GIS_Data\\NaturalEarth\\ne_10m_roads\\ne_10m_roads.shp')
 
 
 # Isochrone ----------------------------------------------------------------
@@ -57,7 +61,11 @@ ucd_100<-st_buffer(ucd_point_3310, 160934) #buffer of ~100 miles
 
 # Plots -------------------------------------------------------------------
 
+roads_3310<-st_transform(roads, 3310)
+
+
 # plot with base R
-plot(ucd_100$geometry)
-plot(isochrone_3310$geometry, add=TRUE)
+plot(ucd_100$geometry, border='darkorange', lwd=2)
+plot(roads_3310$geometry, add=TRUE)
+plot(isochrone_3310$geometry, add=TRUE, col='darkgreen', lwd=2)
 plot(ucd_point_3310$geometry, add=TRUE, pch = 15)
