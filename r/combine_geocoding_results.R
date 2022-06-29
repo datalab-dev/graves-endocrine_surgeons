@@ -75,3 +75,13 @@ addresses<-addresses[-c(217,427,257),]
 #did any records get geocoded to a different state than we gave Geocodio?
 #Note that Michael Sim's address was listed in "Indianapolis, MI", but Geocodio corrected it to Indiana, which I think is correct because MI doesn't have an Indianapolis and the medical center name is Indiana University.
 addresses[which(addresses$state != addresses$State), c(1,7,18)]
+
+
+#construct the file name
+date_time<-Sys.time()
+date_time<-gsub(" ", "_", date_time)
+date_time<-gsub(":", "", date_time)
+
+file_name<-paste0("geocoded_addresses_", date_time, ".csv")
+#Write the file to disk
+write.csv(addresses, file=file_name)
