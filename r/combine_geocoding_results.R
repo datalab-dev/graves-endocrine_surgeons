@@ -10,9 +10,9 @@ setwd("D:\\Graves_Endocrine_Surgery\\data\\address")
 
 # load data
 
-addresses<-read.csv("geocoded_addresses_geocodio_2022-06-16.csv")
-parkinglots<-read.csv("geocoded_parking_lot_addresses_geocodio2022-06-28.csv")
-google<-read.csv("addresses_locations_from_google_maps_2022-06-28.csv")
+addresses<-read.csv("geocoded_addresses_geocodio_2022-06-16.csv", encoding= "Latin-1", sep=",", strip.white = TRUE)
+parkinglots<-read.csv("geocoded_parking_lot_addresses_geocodio2022-06-28.csv", encoding= "Latin-1", sep=",", strip.white = TRUE)
+google<-read.csv("addresses_locations_from_google_maps_2022-06-28.csv", encoding= "Latin-1", sep=",", strip.white = TRUE)
 
 
 # Custom Functions ---------------------------------------------------------------
@@ -59,5 +59,10 @@ for (i in google$full_name){
 addresses<-rbind(addresses, google)
 
 
-#remove duplicate for Grace Lee - row 277 geocoded to the wrong state
-addresses<-addresses[-277,]
+#remove duplicate for Grace Lee - row 257 geocoded to the wrong state
+which(duplicated(addresses$full_name))
+addresses<-addresses[-257,]
+
+
+#did any records get geocoded to a different state than we gave Geocodio?
+addresses[which(addresses$state != addresses$State), c(1,7,18)]
