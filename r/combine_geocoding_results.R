@@ -29,6 +29,7 @@ name_key<-function(address_table){
 }
 
 
+
 # Analysis ----------------------------------------------------------------
 
 # add the name key column so it's easier to identify the right row to replace
@@ -58,11 +59,19 @@ for (i in google$full_name){
 
 addresses<-rbind(addresses, google)
 
+#gsub(pattern="\xa0", replacement="", addresses[which(addresses$state != addresses$State), 1])
+for (j in c(1:3,7)){
+  addresses[,j]<-gsub(pattern="\xa0", replacement="", addresses[,j])
+}
 
-#remove duplicate for Grace Lee - row 257 geocoded to the wrong state
+
+
+#remove duplicate for Grace Lee is a duplicate record and row 257 geocoded to the wrong state; the other rows are duplicates with similar addresses and I kept the one that had a higher geocode rating. Other doctors appear to have two office locations, so the name is duplicated but the office isn't so those remain as-is in the data set.
 which(duplicated(addresses$full_name))
-addresses<-addresses[-257,]
+addresses[which(duplicated(addresses$full_name)), c(1,4:7)]
+addresses<-addresses[-c(217,427,257),]
 
 
 #did any records get geocoded to a different state than we gave Geocodio?
+#Note that Michael Sim's address was listed in "Indianapolis, MI", but Geocodio corrected it to Indiana, which I think is correct because MI doesn't have an Indianapolis and the medical center name is Indiana University.
 addresses[which(addresses$state != addresses$State), c(1,7,18)]
