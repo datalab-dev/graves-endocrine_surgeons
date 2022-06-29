@@ -1,4 +1,4 @@
-#GOAL: Combine all of the address datasets into one.
+#GOAL: Combine all of the address data sets into one.
 
 
 # Set Up ------------------------------------------------------------------
@@ -44,8 +44,20 @@ google<-name_key(google)
 
 for (i in parkinglots$full_name){
   name_index<-which(addresses$full_name == i)
-  print(name_index)
+  print(paste("i=", i, "name_index =", name_index, sep=" "))
+  addresses<-addresses[-name_index,]
 }
-which(addresses$full_name == parkinglots$full_name[1])
+
+addresses<-rbind(addresses, parkinglots)
+
+for (i in google$full_name){
+  name_index<-which(addresses$full_name == i)
+  print(paste("i=", i, "name_index =", name_index, sep=" "))
+  addresses<-addresses[-name_index,]
+}
+
+addresses<-rbind(addresses, google)
 
 
+#remove duplicate for Grace Lee - row 277 geocoded to the wrong state
+addresses<-addresses[-277,]
