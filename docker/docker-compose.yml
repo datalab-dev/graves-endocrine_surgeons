@@ -1,0 +1,26 @@
+version: '3.0'
+services:
+  valhalla:
+    image: gisops/valhalla:latest
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./custom_files/:/custom_files
+    environment:
+      # The tile_file must be located in the `custom_files` folder.
+      # The tile_file has priority and is used when valid.
+      # If the tile_file doesn't exist, the url is used instead.
+      # Don't blank out tile_url when you use tile_file and vice versa.
+      - tile_urls=https://download.geofabrik.de/north-america/us-latest.osm.pbf
+      # Get correct bounding box from e.g. https://boundingbox.klokantech.com/
+      #westlimit=144.4; southlimit=-14.8; eastlimit=-64.4; northlimit=71.6
+      - min_x=144.4    
+      - min_y=-14.8      
+      - max_x=-64.4    
+      - max_y=71.6      
+      - use_tiles_ignore_pbf=True
+      - force_rebuild=False
+      - force_rebuild_elevation=False
+      - build_elevation=True
+      - build_admins=True
+      - build_time_zones=True
