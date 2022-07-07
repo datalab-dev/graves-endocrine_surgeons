@@ -22,9 +22,9 @@ The (planned) directory structure for the project is:
 LICENSE
 README.md
 data/         Data sets (files > 1MB go on Google Drive)
+docker/       Files related to setting up the Docker image for Valhalla
 docs/         Supporting documents
 figures/      Graphics and figures to be used in reporting
-sql/          SQL code
 R/            R source code
 ```
 
