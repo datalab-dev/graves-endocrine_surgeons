@@ -37,4 +37,21 @@ View(vars_acs_profile)
 
 # get data for CA
 
-population<-get_acs(geography="tract", survey="acs5", variable="B01003_001", key=api_key, state="CA")
+population<-get_acs(
+  geography="tract", 
+  survey="acs5", 
+  variable=c(population ="B01003_001"), 
+  key=api_key, 
+  state="CA",
+  geometry= TRUE)
+
+pop_sacramento<-get_acs(
+  geography="tract", 
+  survey="acs5", 
+  variable=c(population ="B01003_001"), 
+  key=api_key, 
+  state="CA",
+  county = "Sacramento",
+  geometry= TRUE) #geometry parameter turns the table into an sf object
+ 
+plot(pop_sacramento["estimate"])
