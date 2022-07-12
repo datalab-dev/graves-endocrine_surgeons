@@ -8,7 +8,7 @@
 library(tidycensus)
 
 # working directory
-
+setwd("D:\\Graves_Endocrine_Surgery\\data")
 
 # load data
 
@@ -42,7 +42,7 @@ population<-get_acs(
   survey="acs5", 
   variable=c(population ="B01003_001"), 
   key=api_key, 
-  state="CA",
+  state=c(06, 04),
   geometry= TRUE)
 
 pop_sacramento<-get_acs(
@@ -55,3 +55,25 @@ pop_sacramento<-get_acs(
   geometry= TRUE) #geometry parameter turns the table into an sf object
  
 plot(pop_sacramento["estimate"])
+
+
+
+
+all_fips<-c(1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 72) #72 is PR
+
+tract_data<-get_acs(
+  geography="tract", 
+  survey="acs5", 
+  year = 2020,
+  variable=c(population ="B01003_001"), 
+  key=api_key, 
+  state=all_fips,
+  geometry= TRUE)
+
+#saveRDS(tract_data, file="./census/tract_pop.rds")
+
+plot(tract_data["estimate"], 
+     xlim=c(-125,-64.4),  
+     ylim=c(25,50),
+     breaks="quantile",
+     border=FALSE)
