@@ -8,12 +8,19 @@ library(sf)
 library(geojsonsf)
 
 # Load Data
-tracts<- readRDS("data/tract_population.rds")
+tracts<- readRDS("./data/tract_population.rds")
 
 #   !!! Change this path when we calculate all the isochrones !!!
 #   !!! This is the test file from the demo to start the coding process !!!
-isochrones<-("D:\Graves_Endocrine_Surgery\data\isochrones\isochrone_ucdhealth_100minutes.json")
+isochrones<-geojson_sf(geojson="D:\\Graves_Endocrine_Surgery\\data\\isochrones\\isochrone_ucdhealth_100minutes.json")
+isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
 
-#ucd_point<-st_as_sf(ucd, coords = c("Longitude", "Latitude"), crs = 4326)
+# Coordinate Reference System
+# EPSG 5070 is USA Contiguous Albers Equal Area Conic
+
+tracts<-st_transform(tracts, crs=5070)
+isochrones<-st_transform(isochrones, crs=5070)
+
+# Analysis ----------------------------------------------------------------
 
 
