@@ -8,7 +8,7 @@ outputs/
 
 
 # R
-*.rds
+#*.rds
 .RData
 .Rhistory
 
