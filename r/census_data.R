@@ -70,7 +70,7 @@ tract_data<-get_acs(
   state=all_fips,
   geometry= TRUE)
 
-#saveRDS(tract_data, file="./census/tract_pop.rds")
+saveRDS(tract_data, file="./census/tract_population.rds")
 
 plot(tract_data["estimate"], 
      xlim=c(-125,-64.4),  
