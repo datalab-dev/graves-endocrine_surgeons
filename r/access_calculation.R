@@ -23,4 +23,15 @@ isochrones<-st_transform(isochrones, crs=5070)
 
 # Analysis ----------------------------------------------------------------
 
+#calculate the area of each tract
 
+
+#intersect the tracts with the isochrone
+
+#calculate the area of each piece
+
+#calclulate the percent area of the new/old areas
+
+#how many people are in each census tract piece?
+
+#how many people are inside vs. outside the isochrone?
