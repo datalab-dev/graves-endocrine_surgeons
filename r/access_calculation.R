@@ -12,6 +12,8 @@ tracts<- readRDS("./data/tract_population.rds")
 
 #   !!! Change this path when we calculate all the isochrones !!!
 #   !!! This is the test file from the demo to start the coding process !!!
+#       ./data/isocrhones_90_min.rds 
+#       ./data/isochrones_120_min.rds
 isochrones<-geojson_sf(geojson="D:\\Graves_Endocrine_Surgery\\data\\isochrones\\isochrone_ucdhealth_100minutes.json")
 isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
 
@@ -24,9 +26,11 @@ isochrones<-st_transform(isochrones, crs=5070)
 # Analysis ----------------------------------------------------------------
 
 #calculate the area of each tract
-
+tracts$tract_area_meters<-st_area(tracts)
 
 #intersect the tracts with the isochrone
+#not sure which tool is the right one - intersect and union aren't right
+#tract_union<-st_union(x=tracts, y=isochrones)
 
 #calculate the area of each piece
 
