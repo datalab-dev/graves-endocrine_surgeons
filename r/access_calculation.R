@@ -4,8 +4,12 @@
 # Set Up ------------------------------------------------------------------
 
 # Libraries
+#devtools::install_github("a-benini/sfhelpers")
+#library(sfhelpers) #the sf_or() function doesn't seem to replicate QGIS' union tool the way it was supposed to
+#library(terra) #terra's union() did strange things
 library(sf)
 library(geojsonsf)
+
 
 # Load Data
 tracts<- readRDS("./data/tract_population.rds")
@@ -29,13 +33,34 @@ isochrones<-st_transform(isochrones, crs=5070)
 tracts$tract_area_meters<-st_area(tracts)
 
 #intersect the tracts with the isochrone
-#not sure which tool is the right one - intersect and union aren't right
-#tract_union<-st_union(x=tracts, y=isochrones)
+#not sure which tool is the right one 
+#   - SF's st_intersect and st_union aren't right
+#   - terra's union isn't right
+#   - sfhelpers st_or() didn't work either
+# 2 step process with SF? st_difference + st_intersection - https://stackoverflow.com/questions/54710574/how-to-do-a-full-union-with-the-r-package-sf 
+
+inside<-st_intersection(tracts, isochrones)
+outside<-st_difference(tracts, isochrones)
 
 #calculate the area of each piece
+inside$inside_area_meters<-st_area(inside)
+outside$outside_area_meters<-st_area(outside)
 
 #calclulate the percent area of the new/old areas
+inside$inside_percent<-as.numeric(inside$inside_area_meters)/as.numeric(inside$tract_area_meters)
+outside$outside_percent<-as.numeric(outside$outside_area_meters)/as.numeric(outside$tract_area_meters)
 
 #how many people are in each census tract piece?
+inside$inside_pop<-inside$inside_percent*inside$estimate
+outside$outside_pop<-outside$outside_percent*outside$estimate
 
 #how many people are inside vs. outside the isochrone?
+has_access<-sum(inside$inside_pop)
+no_access<-sum(outside$outside_pop)
+
+
+
+
+
+
+
