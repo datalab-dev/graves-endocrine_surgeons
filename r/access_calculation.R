@@ -18,8 +18,14 @@ tracts<- readRDS("./data/tract_population.rds")
 #   !!! This is the test file from the demo to start the coding process !!!
 #       ./data/isocrhones_90_min.rds 
 #       ./data/isochrones_120_min.rds
-isochrones<-geojson_sf(geojson="D:\\Graves_Endocrine_Surgery\\data\\isochrones\\isochrone_ucdhealth_100minutes.json")
+
+#isochrones<-geojson_sf(geojson="D:\\Graves_Endocrine_Surgery\\data\\isochrones\\isochrone_ucdhealth_100minutes.json")
+
+isochrones<- readRDS("C:\\Users\\mmtobias\\Downloads\\isochrones_90_min.rds")
+
 isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
+
+isochrones<-st_union(isochrones) #put all the polygons into one layer
 
 # Coordinate Reference System
 # EPSG 5070 is USA Contiguous Albers Equal Area Conic
