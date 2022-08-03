@@ -4,6 +4,7 @@ library("httr")
 library("stringr")
 library("jsonlite")
 library("pbapply")  
+library("geojsonsf")
 
 build_req_str = function(lat, lon, id, time_limit, server, port) {
   locations = data.frame("lat" = lat, "lon" = lon)
@@ -15,8 +16,12 @@ build_req_str = function(lat, lon, id, time_limit, server, port) {
 }
 
 submit_req = function(request) {
-    api_response<-GET(request)
-    isochrone<-fromJSON(rawToChar(api_response$content))
+    api_response = GET(request)
+    response = rawToChar(api_response$content)
+    isochrone = geojson_sf(response)
+    isochrone = st_cast(isochrone, to="POLYGON")
+    isochrone$ID =fromJSON(response)["id"]
+    isochrone
 }
 
 # if using datasci.library.ucdavis.edu as the server, make sure you are 
@@ -24,7 +29,6 @@ submit_req = function(request) {
 server = "http://datasci.library.ucdavis.edu"
 port = 8002
 address_df = read.csv("../data/geocoded_addresses_2022-06-29_144609.csv")
-address_df = head(address_df)
 time_limits = c(90, 120)
 
 for (time_limit in time_limits) {
@@ -34,6 +38,7 @@ for (time_limit in time_limits) {
 
     # actually submit the requests to the server with valhalla
     isochrones = pblapply(requests, submit_req)
+    isochrones = do.call(rbind, isochrones)
     
     # save the results
     saveRDS(isochrones, str_glue("../data/isochrones_{time_limit}_min.rds"))

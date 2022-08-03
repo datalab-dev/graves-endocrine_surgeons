@@ -1,7 +1,7 @@
 # Valhalla
 
 Arthur Koehl
-07/21/2022
+07/29/2022
 
 This notes document walks through installing and using Valhalla with docker.
 
@@ -32,25 +32,40 @@ Running Valhalla through docker provides a variety of benefits including:
     `mkdir /data/custom_data`
     
     <aside>
-    💡 Chose a location that is accessible to multiple users if you expect multiple users may want to modify the data used by Valhalla. Also, during the build process for a large area, Valhalla will use a ton of space. For building its data for North America, Valhalla created over 80GB of files, eventually, when its finished building, the total file size is 15GB.
+    💡 Chose a location that is accessible to multiple users if you expect multiple users may want to modify the data used by Valhalla. Also, during the build process for a large area, Valhalla will use a ton of space. For building its data for the US, Valhalla created over 80GB of files, eventually, when its finished building, the total file size is 15GB.
     
     </aside>
     
-3. start a container with gisops Valhalla docker image:
+3. Create a file called `valhalla.env` with the following lines:
     
-    `docker run -dt -v /data/custom_files:/custom_files -p 8002:8002 --name valhalla gisops/valhalla:latest`
+    ```bash
+    use_titles_ignore_pbf=False
+    force_rebuild=True
+    ```
     
-4. confirm the container is running with `docker container ls` and `docker ps -a`
-5. Download the OpenStreetMap data into the custom_data directory you made in step 2
+    Notice that the environment variable name is lowercased, and the values are capitalized without any quotes around them. 
+    
+4. start a container with gisops Valhalla docker image:
+    
+    `docker run -dt --env-file ~/.valhalla.env -v /data/custom_files:/custom_files -p 8002:8002 --name valhalla gisops/valhalla:latest`
+    
+5. confirm the container is running with `docker container ls` and `docker ps -a`. Confirm that the `use_tiles_ignore_pbf` variable is set to False with `docker inspect valhalla | grep 'pbf'` 
+6. Download the OpenStreetMap data into the custom_data directory you made in step 2
     
     <aside>
-    💡 To download the OpenStreetMap data I used this site: [http://download.geofabrik.de/north-america/us.html](http://download.geofabrik.de/north-america/us.html)
+    💡 To download the OpenStreetMap data for the US I used this site: [http://download.geofabrik.de/north-america/us.html](http://download.geofabrik.de/north-america/us.html) 
+    
+    Puerto Rico needed to be downloaded separately from:
+    [https://download.geofabrik.de/north-america/us/puerto-rico.html](https://download.geofabrik.de/north-america/us/puerto-rico.html)
     
     </aside>
     
-6. Restart the docker container. When the container restarts, the Valhalla instance will scan the custom_data directory for any changes that have occurred - including to the configuration file `valhalla.json` and any OSM data files. Then it will rebuild the necessary data it uses for routing. This process can take several hours, for the full North America OSM data, it took over three hours. Do not attempt to use the docker container until Valhalla has completed its rebuild. To monitor the status of the container, read the log file for the container. The log file can be found with `docker inspect valhalla | grep 'log'`. To restart the docker container:
+
+1. Restart the docker container. When the container restarts, the Valhalla instance will scan the custom_data directory for any changes that have occurred - including to the configuration file `valhalla.json` and any OSM data files. Then it will rebuild the necessary data it uses for routing. This process can take several hours, for the full US OSM data, it took over three hours. Do not attempt to use the docker container until Valhalla has completed its rebuild. To monitor the status of the container, read the log file for the container. The log file can be found with `docker inspect valhalla | grep 'log'`. To restart the docker container:
     
     `docker restart valhalla`
+    
+    You should see an active process with a command like `valhalla_build_tiles -c ...` with `top` 
     
 
 ## **Usage and Testing**
