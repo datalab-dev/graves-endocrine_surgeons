@@ -23,6 +23,8 @@ tracts<- readRDS("./data/tract_population.rds")
 
 isochrones<- readRDS("C:\\Users\\mmtobias\\Downloads\\isochrones_90_min.rds")
 
+
+# process the data
 isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
 
 isochrones<-st_union(isochrones) #put all the polygons into one layer
