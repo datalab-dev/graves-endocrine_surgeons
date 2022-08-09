@@ -16,7 +16,11 @@ calc_access<-function(tracts, isochrones, crs=5070 ){
   
     # Process the Isochrones
   isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
+  isochrones<-st_make_valid(isochrones)
+  
+
   isochrones<-st_union(isochrones) #put all the polygons into one layer
+  isochrones<-st_make_valid(isochrones_u)
   
   # Coordinate Reference System
   # Default Coordinate Reference System = EPSG 5070 is USA Contiguous Albers Equal Area Conic
@@ -92,6 +96,8 @@ for (i in iso_list){
 }
 
 
-
+# can terra union/dissove/merge the isochrone vectors without causing an invalid geometry?
+library(terra)
+iso_merge<-merge(isochrones)
 
 
