@@ -3,6 +3,7 @@
 
 # DataLab Project Directory Structure
 #data/
+data/temporary
 outputs/
 *.pdf
 
@@ -37,3 +38,5 @@ __pycache__/
 Network Trash Folder
 Temporary Items
 .apdisk
+data/temporary/dissolve_output.gpkg
+data/temporary/isochrones.gpkg

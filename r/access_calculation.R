@@ -14,9 +14,10 @@ library(qgisprocess)
 # Custom Functions
 calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/temporary" ){
   
-  # Process the Isochrones
-  #isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
+  #remove the files in the temporary directory
+  do.call(file.remove, list(list.files(tempdirectory, full.names = TRUE)))
   
+
   # Check for invalid geometries (repeated vertexes)
   
   #   Test for valid polygons
@@ -47,39 +48,59 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
     dir.create(file.path(tempdirectory)), 
     FALSE) 
   
+  #remove the ID column because it's a list and causing problems
   isochrones<-isochrones[,-9]
   
-  #write the isochrones file to the temporary file
+  #write the isochrones files to the temporary file
   st_write(isochrones, paste0(tempdirectory,"/isochrones.gpkg"), driver= "GPKG")
+
   
   #define the input and output files
-  output_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
-  input_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
+  dissolved_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
+  isochrone_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
   
   qgis_run_algorithm(
     "native:dissolve",
-    INPUT = input_file,
+    INPUT = isochrone_file,
     FIELD = "[]",
-    OUTPUT = output_file
+    OUTPUT = dissolved_file
   )
   
-  
+  #isochrones_dissolved<-st_read(output_file)
 
   
   #calculate the area of each tract
   tracts$tract_area_meters<-st_area(tracts)
   
-  #intersect the tracts with the isochrone
-  #not sure which tool is the right one 
-  #   - SF's st_intersect and st_union aren't right
-  #   - terra's union isn't right
-  #   - sfhelpers st_or() didn't work either
-  # 2 step process with SF? st_difference + st_intersection - https://stackoverflow.com/questions/54710574/how-to-do-a-full-union-with-the-r-package-sf 
+  #write the tract to a file
+  st_write(tracts, paste0(tempdirectory,"/tracts.gpkg"), driver= "GPKG")  
   
-  inside<-st_intersection(tracts, isochrones)
-  outside<-st_difference(tracts, isochrones)
+    
+  # Union (QGIS) the tracts with the isochrone
+  tracts_file<-file.path(paste0(tempdirectory,"/tracts.gpkg"))
+  union_file<-file.path(paste0(tempdirectory,"/union.gpkg"))
+  
+  qgis_run_algorithm(
+    "native:union",
+    INPUT = tracts_file,
+    OVERLAY = dissolved_file,
+    FIELD = "[]",
+    OUTPUT = union_file
+  )
+  
+  everything<-st_read(union_file)
+  
   
   #calculate the area of each piece
+  #   Inside: fid_2 != NULL
+  #   Outside: fid_2 = NULL
+  #inside$inside_area_meters<-st_area(inside)
+  #outside$outside_area_meters<-st_area(outside)
+  
+  
+  inside<-subset(everything, is.na(fid_2)==FALSE )
+  outside<-subset(everything, is.na(fid_2)==TRUE )
+  
   inside$inside_area_meters<-st_area(inside)
   outside$outside_area_meters<-st_area(outside)
   
@@ -92,8 +113,8 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   outside$outside_pop<-outside$outside_percent*outside$estimate
   
   #how many people are inside vs. outside the isochrone?
-  has_access<-sum(inside$inside_pop)
-  no_access<-sum(outside$outside_pop)
+  has_access<-sum(inside$inside_pop, na.rm = TRUE)
+  no_access<-sum(outside$outside_pop, na.rm = TRUE)
   
   access_results<-as.data.frame(
     matrix(
@@ -105,24 +126,13 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
       ), 
     )
   
-  #remove the files in the temporary directory
-  do.call(file.remove, list(list.files(tempdirectory, full.names = TRUE)))
+
   
   return(access_results)
 }
 
 # Load Data
 tracts<- readRDS("./data/tract_population.rds")
-
-#   !!! Change this path when we calculate all the isochrones !!!
-#   !!! This is the test file from the demo to start the coding process !!!
-#       ./data/isocrhones_90_min.rds 
-#       ./data/isochrones_120_min.rds
-
-#isochrones<-geojson_sf(geojson="D:\\Graves_Endocrine_Surgery\\data\\isochrones\\isochrone_ucdhealth_100minutes.json")
-
-#isochrones<- readRDS("C:\\Users\\mmtobias\\Downloads\\isochrones_90_min.rds")
-
 
 # Get the list of isochrone data files
 iso_list<-list.files("./data", pattern="^isochrones", full.names = TRUE)
@@ -137,8 +147,5 @@ for (i in iso_list){
 }
 
 
-# can terra union/dissove/merge the isochrone vectors without causing an invalid geometry?
-library(terra)
-iso_merge<-merge(isochrones)
 
 
