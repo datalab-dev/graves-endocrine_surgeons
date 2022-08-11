@@ -137,13 +137,16 @@ tracts<- readRDS("./data/tract_population.rds")
 # Get the list of isochrone data files
 iso_list<-list.files("./data", pattern="^isochrones", full.names = TRUE)
 
+access_table<-as.data.frame(matrix(nrow=0, ncol=2))
+
 # Run the Calculation
 for (i in iso_list){
   print(i)
   isochrone<-readRDS(i)
   print("RDS read")
   access_numbers<-calc_access(tracts, isochrone)
-  print(access_numbers)
+  access_table<-rbind(access_table, access_numbers)
+  print(access_table)
 }
 
 

@@ -40,3 +40,4 @@ Temporary Items
 .apdisk
 data/temporary/dissolve_output.gpkg
 data/temporary/isochrones.gpkg
+*.gpkg
