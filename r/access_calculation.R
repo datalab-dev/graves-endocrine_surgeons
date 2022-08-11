@@ -4,29 +4,59 @@
 # Set Up ------------------------------------------------------------------
 
 # Libraries
-#devtools::install_github("a-benini/sfhelpers")
-#library(sfhelpers) #the sf_or() function doesn't seem to replicate QGIS' union tool the way it was supposed to
-#library(terra) #terra's union() did strange things
+#remotes::install_github("paleolimbot/qgisprocess") #https://paleolimbot.github.io/qgisprocess/
+
 library(sf)
-library(geojsonsf)
+library(qgisprocess) 
+#library(geojsonsf)
 
 
 # Custom Functions
-calc_access<-function(tracts, isochrones, crs=5070 ){
+calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/temporary" ){
   
-    # Process the Isochrones
-  isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
-  isochrones<-st_make_valid(isochrones)
+  # Process the Isochrones
+  #isochrones<-st_cast(isochrones, to="POLYGON" ) #cast the linestring to a polygon
   
-
-  isochrones<-st_union(isochrones) #put all the polygons into one layer
-  isochrones<-st_make_valid(isochrones_u)
+  # Check for invalid geometries (repeated vertexes)
+  
+  #   Test for valid polygons
+  valid_test<-st_is_valid(isochrones)
+  #   If any invalid polygons are found, fix them; report back in either case
+  if (FALSE %in% valid_test){
+    print("One or more polygons was invalid. Using st_make_valid() to fix errors.")
+    isochrones<-st_make_valid(isochrones)
+  }else{
+    print("No invalid polygons detected.")
+  }
+  
   
   # Coordinate Reference System
   # Default Coordinate Reference System = EPSG 5070 is USA Contiguous Albers Equal Area Conic
   # transform the data into the same CRS
   tracts<-st_transform(tracts, crs)
   isochrones<-st_transform(isochrones, crs)
+  
+  
+  
+  # Put all the polygons into one layer - QGIS' dissolve does this
+  #   sf's st_union() has odd, nested results that aren't helpful
+  
+  
+  ifelse(!dir.exists(file.path(tempdirectory)), dir.create(file.path(tempdirectory)), FALSE)
+  
+  write_sf(isochrones, paste0(tempdirectory,"isochrones.gpkg"))
+  output_file<-file.path(paste0(tempdirectory,"dissolve_output.gpkg"))
+  input_file<-file.path(paste0(tempdirectory,"isochrones.gpkg"))
+  
+  qgis_run_algorithm(
+    "native:dissolve",
+    INPUT = input_file,
+    FIELD = "[]",
+    OUTPUT = output_file
+  )
+  
+  
+
   
   #calculate the area of each tract
   tracts$tract_area_meters<-st_area(tracts)
