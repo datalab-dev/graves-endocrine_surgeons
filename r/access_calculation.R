@@ -41,12 +41,20 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   # Put all the polygons into one layer - QGIS' dissolve does this
   #   sf's st_union() has odd, nested results that aren't helpful
   
+  #make a temporary directory to hold the files, if it doesn't already exist
+  ifelse(
+    !dir.exists(file.path(tempdirectory)), 
+    dir.create(file.path(tempdirectory)), 
+    FALSE) 
   
-  ifelse(!dir.exists(file.path(tempdirectory)), dir.create(file.path(tempdirectory)), FALSE)
+  isochrones<-isochrones[,-9]
   
-  write_sf(isochrones, paste0(tempdirectory,"isochrones.gpkg"))
-  output_file<-file.path(paste0(tempdirectory,"dissolve_output.gpkg"))
-  input_file<-file.path(paste0(tempdirectory,"isochrones.gpkg"))
+  #write the isochrones file to the temporary file
+  st_write(isochrones, paste0(tempdirectory,"/isochrones.gpkg"), driver= "GPKG")
+  
+  #define the input and output files
+  output_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
+  input_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
   
   qgis_run_algorithm(
     "native:dissolve",
@@ -96,6 +104,9 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
       dimnames=list(c(NULL), c("has_access", "no_access")) #row then col names
       ), 
     )
+  
+  #remove the files in the temporary directory
+  do.call(file.remove, list(list.files(tempdirectory, full.names = TRUE)))
   
   return(access_results)
 }
