@@ -58,6 +58,7 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   #define the input and output files
   dissolved_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
   isochrone_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
+  dissolved_multi<-file.path(paste0(tempdirectory,"/dissolve_multi.gpkg"))
   
   qgis_run_algorithm(
     "native:dissolve",
@@ -65,8 +66,14 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
     FIELD = "[]",
     OUTPUT = dissolved_file
   )
+ 
+  qgis_run_algorithm( 
+    "native:multiparttosingleparts",
+    INPUT = dissolved_file,
+    OUTPUT = dissolved_multi
+  )
   
-  #isochrones_dissolved<-st_read(output_file)
+  isochrones_dissolved<-st_read(dissolved_multi)
 
   
   #calculate the area of each tract
@@ -78,17 +85,48 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
     
   # Union (QGIS) the tracts with the isochrone
   tracts_file<-file.path(paste0(tempdirectory,"/tracts.gpkg"))
-  union_file<-file.path(paste0(tempdirectory,"/union.gpkg"))
+  union_input<-file.path(paste0(tempdirectory,"/tracts.gpkg"))
   
-  qgis_run_algorithm(
-    "native:union",
-    INPUT = tracts_file,
-    OVERLAY = dissolved_file,
-    FIELD = "[]",
-    OUTPUT = union_file
-  )
   
-  everything<-st_read(union_file)
+  #seed the union file with the tracts to start
+  #st_write(tracts, paste0(tempdirectory,"/union.gpkg"), driver= "GPKG")
+  
+  for (i in 1:length(isochrones_dissolved[,1])){
+    print(i)
+    
+    (dissolved_file_i<-file.path(paste0(tempdirectory,"/dissolved_", i,".gpkg")))
+    (union_output<-file.path(paste0(tempdirectory,"/union_", i, ".gpkg")))
+    
+    #write the i-th isochrone to the disc
+    st_write(isochrones_dissolved[i,], dissolved_file_i, driver="GPKG")
+    
+    qgis_run_algorithm(
+      "native:union",
+      INPUT = union_input,
+      OVERLAY = dissolved_file_i,
+      FIELD = "[]",
+      OUTPUT = union_output
+    )
+    
+    union_input<-union_output
+    
+    #remove unnecessary files
+    file.remove(dissolved_file_i)
+    
+    ifelse(
+      file.exists(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
+      file.remove(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
+      FALSE) 
+
+    ifelse(
+      file.exists(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
+      file.remove(file.path(paste0(tempdirectory,"/dissolved_", i-1,".gpkg"))), 
+      FALSE)     
+
+  }
+
+  
+  everything<-st_read(union_output)
   
   
   #calculate the area of each piece
