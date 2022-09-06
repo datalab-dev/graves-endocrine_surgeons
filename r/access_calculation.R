@@ -74,6 +74,9 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   )
   
   isochrones_dissolved<-st_read(dissolved_multi)
+  isochrones_dissolved$inside<-1
+  isochrones_dissolved_minimal<-isochrones_dissolved[,10]
+  
 
   
   #calculate the area of each tract
@@ -91,14 +94,16 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   #seed the union file with the tracts to start
   #st_write(tracts, paste0(tempdirectory,"/union.gpkg"), driver= "GPKG")
   
-  for (i in 1:length(isochrones_dissolved[,1])){
+  for (i in 1:length(isochrones_dissolved_minimal[,1])){
     print(i)
     
     (dissolved_file_i<-file.path(paste0(tempdirectory,"/dissolved_", i,".gpkg")))
     (union_output<-file.path(paste0(tempdirectory,"/union_", i, ".gpkg")))
     
     #write the i-th isochrone to the disc
-    st_write(isochrones_dissolved[i,], dissolved_file_i, driver="GPKG")
+    st_write(isochrones_dissolved_minimal[i,], dissolved_file_i, driver="GPKG")
+    
+    #qgis_show_help("native:union")
     
     qgis_run_algorithm(
       "native:union",
