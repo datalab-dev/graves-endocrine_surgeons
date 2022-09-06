@@ -133,6 +133,11 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   
   everything<-st_read(union_output)
   
+  inside_cols<-as.data.frame(everything)
+  inside_cols<-inside_cols[,grep("inside", names(everything))]
+  inside_cols<-rowSums(inside_cols, na.rm = TRUE)
+  
+  everything$inside_iso<-inside_cols
   
   #calculate the area of each piece
   #   Inside: fid_2 != NULL
@@ -141,8 +146,11 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   #outside$outside_area_meters<-st_area(outside)
   
   
-  inside<-subset(everything, is.na(fid_2)==FALSE )
-  outside<-subset(everything, is.na(fid_2)==TRUE )
+  # inside<-subset(everything, is.na(fid_2)==FALSE )
+  # outside<-subset(everything, is.na(fid_2)==TRUE )
+
+  inside<-subset(everything, inside_iso==1)
+  outside<-subset(everything, inside_iso==0)
   
   inside$inside_area_meters<-st_area(inside)
   outside$outside_area_meters<-st_area(outside)
