@@ -94,7 +94,7 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   #seed the union file with the tracts to start
   #st_write(tracts, paste0(tempdirectory,"/union.gpkg"), driver= "GPKG")
   
-  for (i in 1:length(isochrones_dissolved_minimal[,1])){
+  for (i in 1:length(isochrones_dissolved_minimal$geom)){
     print(i)
     
     (dissolved_file_i<-file.path(paste0(tempdirectory,"/dissolved_", i,".gpkg")))
@@ -177,8 +177,10 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
       ), 
     )
   
+  plot(inside$geom)
 
-  
+  return(inside)
+  return(outside)
   return(access_results)
 }
 
