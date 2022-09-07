@@ -4,6 +4,7 @@
 # DataLab Project Directory Structure
 #data/
 data/temporary
+data/temporary/
 outputs/
 *.pdf
 
