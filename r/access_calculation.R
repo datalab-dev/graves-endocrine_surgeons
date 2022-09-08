@@ -59,21 +59,25 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   dissolved_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
   isochrone_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
   dissolved_multi<-file.path(paste0(tempdirectory,"/dissolve_multi.gpkg"))
+
+  # Dissolve the isochrones into one multipolygon, then explode it into it's component polygons
+  #this is making too big of polygons on the east coast
+  # qgis_run_algorithm(
+  #   "native:dissolve",
+  #   INPUT = isochrone_file,
+  #   FIELD = "[]",
+  #   OUTPUT = dissolved_file
+  # )
+  # 
+  # qgis_run_algorithm( 
+  #   "native:multiparttosingleparts",
+  #   INPUT = dissolved_file,
+  #   OUTPUT = dissolved_multi
+  # )
   
-  qgis_run_algorithm(
-    "native:dissolve",
-    INPUT = isochrone_file,
-    FIELD = "[]",
-    OUTPUT = dissolved_file
-  )
- 
-  qgis_run_algorithm( 
-    "native:multiparttosingleparts",
-    INPUT = dissolved_file,
-    OUTPUT = dissolved_multi
-  )
   
-  isochrones_dissolved<-st_read(dissolved_multi)
+  #isochrones_dissolved<-st_read(dissolved_multi)
+  isochrones_dissolved<-isochrones
   isochrones_dissolved$inside<-1
   isochrones_dissolved_minimal<-isochrones_dissolved[,10]
   
