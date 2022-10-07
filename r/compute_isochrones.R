@@ -5,6 +5,7 @@ library("stringr")
 library("jsonlite")
 library("pbapply")  
 library("geojsonsf")
+library("sf")
 
 build_req_str = function(lat, lon, id, time_limit, server, port) {
   locations = data.frame("lat" = lat, "lon" = lon)
@@ -28,8 +29,8 @@ submit_req = function(request) {
 # on the staff vpn
 server = "http://datasci.library.ucdavis.edu"
 port = 8002
-address_df = read.csv("../data/geocoded_addresses_2022-06-29_144609.csv")
-time_limits = c(90, 120)
+address_df = read.csv("./data/geocoded_addresses_2022-06-29_144609.csv")
+time_limits = c(60) #c(90, 120)
 
 for (time_limit in time_limits) {
     # construct a vector of the request strings from the data
@@ -41,5 +42,5 @@ for (time_limit in time_limits) {
     isochrones = do.call(rbind, isochrones)
     
     # save the results
-    saveRDS(isochrones, str_glue("../data/isochrones_{time_limit}_min.rds"))
+    saveRDS(isochrones, str_glue("./data/isochrones_{time_limit}_min.rds"))
 }
