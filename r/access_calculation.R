@@ -32,16 +32,16 @@ fix_invalid<-function(polygons){
 
 
 
-calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/temporary" ){
+calc_access<-function(tracts, isochrones, crs=5070, distance_label="___", save_directory="./data/isochrones_tracts" ){
   
   #make a temporary directory to hold the files, if it doesn't already exist
   ifelse(
-    !dir.exists(file.path(tempdirectory)), 
-    dir.create(file.path(tempdirectory)), 
+    !dir.exists(file.path(save_directory)), 
+    dir.create(file.path(save_directory)), 
     FALSE) 
   
   #remove the files in the temporary directory
-  do.call(file.remove, list(list.files(tempdirectory, full.names = TRUE)))
+  #do.call(file.remove, list(list.files(save_directory, full.names = TRUE)))
   
 
   # Check for invalid geometries (repeated vertexes)
@@ -68,13 +68,13 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   isochrones<-isochrones[,8]
   
   # #write the isochrones files to the temporary file
-  # st_write(isochrones, paste0(tempdirectory,"/isochrones.gpkg"), driver= "GPKG")
+  # st_write(isochrones, paste0(save_directory,"/isochrones.gpkg"), driver= "GPKG")
   # 
   # 
   # #define the input and output files
-  # dissolved_file<-file.path(paste0(tempdirectory,"/dissolve_output.gpkg"))
-  # isochrone_file<-file.path(paste0(tempdirectory,"/isochrones.gpkg"))
-  # dissolved_multi<-file.path(paste0(tempdirectory,"/dissolve_multi.gpkg"))
+  # dissolved_file<-file.path(paste0(save_directory,"/dissolve_output.gpkg"))
+  # isochrone_file<-file.path(paste0(save_directory,"/isochrones.gpkg"))
+  # dissolved_multi<-file.path(paste0(save_directory,"/dissolve_multi.gpkg"))
 
   # Dissolve the isochrones into one multipolygon, then explode it into it's component polygons
   #this is making too big of polygons on the east coast
@@ -108,22 +108,22 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   outside<-st_difference(tracts, isochrones_dissolved)
   
   #write the tract to a file
-  #st_write(tracts, paste0(tempdirectory,"/tracts.gpkg"), driver= "GPKG")  
+  #st_write(tracts, paste0(save_directory,"/tracts.gpkg"), driver= "GPKG")  
   
     
   # # Union (QGIS) the tracts with the isochrone
-  # tracts_file<-file.path(paste0(tempdirectory,"/tracts.gpkg"))
-  # union_input<-file.path(paste0(tempdirectory,"/tracts.gpkg"))
+  # tracts_file<-file.path(paste0(save_directory,"/tracts.gpkg"))
+  # union_input<-file.path(paste0(save_directory,"/tracts.gpkg"))
   # 
   # 
   # #seed the union file with the tracts to start
-  # #st_write(tracts, paste0(tempdirectory,"/union.gpkg"), driver= "GPKG")
+  # #st_write(tracts, paste0(save_directory,"/union.gpkg"), driver= "GPKG")
   # 
   # for (i in 1:length(isochrones_dissolved_minimal$geom)){
   #   print(i)
   #   
-  #   (dissolved_file_i<-file.path(paste0(tempdirectory,"/dissolved_", i,".gpkg")))
-  #   (union_output<-file.path(paste0(tempdirectory,"/union_", i, ".gpkg")))
+  #   (dissolved_file_i<-file.path(paste0(save_directory,"/dissolved_", i,".gpkg")))
+  #   (union_output<-file.path(paste0(save_directory,"/union_", i, ".gpkg")))
   #   
   #   #write the i-th isochrone to the disc
   #   st_write(isochrones_dissolved_minimal[i,], dissolved_file_i, driver="GPKG")
@@ -144,13 +144,13 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   #   file.remove(dissolved_file_i)
   #   
   #   ifelse(
-  #     file.exists(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
-  #     file.remove(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
+  #     file.exists(file.path(paste0(save_directory,"/union_", i-1, ".gpkg"))), 
+  #     file.remove(file.path(paste0(save_directory,"/union_", i-1, ".gpkg"))), 
   #     FALSE) 
   # 
   #   ifelse(
-  #     file.exists(file.path(paste0(tempdirectory,"/union_", i-1, ".gpkg"))), 
-  #     file.remove(file.path(paste0(tempdirectory,"/dissolved_", i-1,".gpkg"))), 
+  #     file.exists(file.path(paste0(save_directory,"/union_", i-1, ".gpkg"))), 
+  #     file.remove(file.path(paste0(save_directory,"/dissolved_", i-1,".gpkg"))), 
   #     FALSE)     
   # 
   # }
@@ -205,9 +205,12 @@ calc_access<-function(tracts, isochrones, crs=5070, tempdirectory="./data/tempor
   
   plot(inside$geometry)
 
-  st_write(inside, file.path(paste0(tempdirectory,"/inside_tracts.gpkg")), driver="GPKG")
-  st_write(outside, file.path(paste0(tempdirectory,"/outside_tracts.gpkg")), driver="GPKG")
+  #write the inside and outside polygons to a file, overwriting existing files with the same name
+  st_write(inside, file.path(paste0(save_directory,"/inside_tracts_", distance_label, ".gpkg")), driver="GPKG", delete_dsn=TRUE)
+  
+  st_write(outside, file.path(paste0(save_directory,"/outside_tracts_", distance_label, ".gpkg")), driver="GPKG", delete_dsn=TRUE)
 
+  #return the results
   return(access_results)
 }
 
@@ -224,9 +227,10 @@ start_time<-Sys.time()
 # Run the Calculation
 for (i in iso_list){
   print(i)
+  iso_dist<-as.list(unlist(strsplit(i, "_")))[[2]] #get the distance number
   isochrone<-readRDS(i)
   print("RDS read")
-  access_numbers<-calc_access(tracts, isochrone)
+  access_numbers<-calc_access(tracts, isochrone, distance_label = iso_dist)
   access_numbers$isochrone<-i
   access_table<-rbind(access_table, access_numbers)
   print(access_table)
