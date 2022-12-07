@@ -5,6 +5,8 @@
 #data/
 data/temporary
 data/temporary/
+data/isochrone_tracts
+data/isochrone_tracts/
 outputs/
 *.pdf
 
