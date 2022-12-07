@@ -22,9 +22,7 @@ The (planned) directory structure for the project is:
 LICENSE
 README.md
 data/         Data sets (files > 1MB go on Google Drive)
-docker/       Files related to setting up the Docker image for Valhalla
-docs/         Supporting documents
-figures/      Graphics and figures to be used in reporting
+docs/         Supporting documents - documentation of the process of setting up Valhalla with Docker on the DataLab server
 R/            R source code
 ```
 
@@ -45,6 +43,8 @@ The directory stucture for the files on Google Drive is:
 
 ```
 data/                                         Data sets
+documentation                                 Documentation for the workflow and methods used in the analysis
+literature                                    Published papers related to the work at hand
 support_documents/                            Project proposal, collaboration agreement, scoping document, etc.
 weekly_updates/                               Weekly progress reports from the DataLab team
 meeting_notes_graves_2022_endocrine_surgery   Running meeting notes
