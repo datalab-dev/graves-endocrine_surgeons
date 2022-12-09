@@ -1,0 +1,12 @@
+Source,Category,column_name,census_variable,description
+decennial census,Race,all,P2_001N,All
+decennial census,Race,hisp,P2_002N,Hispanic
+decennial census,Race,white,P2_005N,White
+decennial census,Race,baa,P2_006N,Black or African American
+decennial census,Race,amin,P2_007N,American Indian
+decennial census,Race,asian,P2_008N,Asian
+decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
+decennial census,Race,other,P2_010N,Some Other Race
+decennial census,Race,multi,P2_011N,Two or More Races
+decennial census,Hispanic origin,hisp,P2_002N,Hispanic
+decennial census,Hispanic origin,all,P2_003N,Not Hispanic
