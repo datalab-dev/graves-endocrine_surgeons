@@ -10,5 +10,21 @@ decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
 decennial census,Hispanic origin,all,P2_003N,Not Hispanic
-acs census,Sex,m,B01001_002,Male
-acs census,Sex,f,B01001_026,Female
+acs census,Sex by age,m,B01001_002,Male of all ages
+acs census,Sex by age,f,B01001_026,Female of all ages
+acs census,Household income in the past 12 months,a,B19001_002,Total Less than $10,000
+acs census,Household income in the past 12 months,b,B19001_003,Total $10,000 to $14,999
+acs census,Household income in the past 12 months,c,B19001_004,Total $15,000 to $19,999
+acs census,Household income in the past 12 months,d,B19001_005,Total $20,000 to $24,999
+acs census,Household income in the past 12 months,e,B19001_006,Total $25,000 to $29,999
+acs census,Household income in the past 12 months,f,B19001_007,Total $30,000 to $34,999
+acs census,Household income in the past 12 months,g,B19001_008,Total $35,000 to $39,999
+acs census,Household income in the past 12 months,h,B19001_009,Total $40,000 to $44,999
+acs census,Household income in the past 12 months,i,B19001_0010,Total $45,000 to $49,999
+acs census,Household income in the past 12 months,j,B19001_0011,Total $50,000 to $59,999
+acs census,Household income in the past 12 months,k,B19001_0012,Total $60,000 to $74,999
+acs census,Household income in the past 12 months,l,B19001_0013,Total $75,000 to $99,999
+acs census,Household income in the past 12 months,m,B19001_0014,Total $100,000 to $124,999
+acs census,Household income in the past 12 months,n,B19001_0015,Total $125,000 to $149,999
+acs census,Household income in the past 12 months,o,B19001_0016,Total $150,000 to $199,999
+acs census,Household income in the past 12 months,p,B19001_0017,Total $200,000 or more
