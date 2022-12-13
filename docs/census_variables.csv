@@ -10,3 +10,5 @@ decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
 decennial census,Hispanic origin,all,P2_003N,Not Hispanic
+acs census,Sex,m,B01001_002,Male
+acs census,Sex,f,B01001_026,Female
