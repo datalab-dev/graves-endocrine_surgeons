@@ -10,3 +10,13 @@ decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
 decennial census,Hispanic origin,all,P2_003N,Not Hispanic
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_001,total
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"	
+B05001_002","U.S. citizen, born in the United States"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"	
+B05001_004","U.S. citizen, born abroad of American parent(s)"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"	
+B05001_005",U.S. citizen by naturalization
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"	
+B05001_006",Not a U.S. citizen
