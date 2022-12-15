@@ -1,24 +1,24 @@
-Source,Category,column_name,census_variable,description
-decennial census,Race,all,P2_001N,All
-decennial census,Race,hisp,P2_002N,Hispanic
-decennial census,Race,white,P2_005N,White
-decennial census,Race,baa,P2_006N,Black or African American
-decennial census,Race,amin,P2_007N,American Indian
-decennial census,Race,asian,P2_008N,Asian
-decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
-decennial census,Race,other,P2_010N,Some Other Race
-decennial census,Race,multi,P2_011N,Two or More Races
-decennial census,Hispanic origin,hisp,P2_002N,Hispanic
-decennial census,Hispanic origin,all,P2_003N,Not Hispanic
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_001,total
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"B05001_002","U.S. citizen, born in the United States"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"B05001_004","U.S. citizen, born abroad of American parent(s)"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"B05001_005",U.S. citizen by naturalization
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,"B05001_006",Not a U.S. citizen
-acs census,Sex by age,m,B01001_002,Male of all ages
-acs census,Sex by age,f,B01001_026,Female of all ages
-acs census,Household income in the past 12 months,a,B19001_002,Total Less than $10,000
+Source,Category,column_name,census_variable,description,,
+decennial census,Race,all,P2_001N,All,,
+decennial census,Race,hisp,P2_002N,Hispanic,,
+decennial census,Race,white,P2_005N,White,,
+decennial census,Race,baa,P2_006N,Black or African American,,
+decennial census,Race,amin,P2_007N,American Indian,,
+decennial census,Race,asian,P2_008N,Asian,,
+decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander,,
+decennial census,Race,other,P2_010N,Some Other Race,,
+decennial census,Race,multi,P2_011N,Two or More Races,,
+decennial census,Hispanic origin,hisp,P2_002N,Hispanic,,
+decennial census,Hispanic origin,all,P2_003N,Not Hispanic,,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_001,total,,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_002,"U.S. citizen, born in the United States",,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas",,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_004,"U.S. citizen, born abroad of American parent(s)",,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_005,U.S. citizen by naturalization,,
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_006,Not a U.S. citizen,,
+acs census,Sex by age,m,B01001_002,Male of all ages,,
+acs census,Sex by age,f,B01001_026,Female of all ages,,
+acs census,Household income in the past 12 months,a,B19001_002,Total Less than $10,0,
 acs census,Household income in the past 12 months,b,B19001_003,Total $10,000 to $14,999
 acs census,Household income in the past 12 months,c,B19001_004,Total $15,000 to $19,999
 acs census,Household income in the past 12 months,d,B19001_005,Total $20,000 to $24,999
@@ -33,27 +33,38 @@ acs census,Household income in the past 12 months,l,B19001_0013,Total $75,000 to
 acs census,Household income in the past 12 months,m,B19001_0014,Total $100,000 to $124,999
 acs census,Household income in the past 12 months,n,B19001_0015,Total $125,000 to $149,999
 acs census,Household income in the past 12 months,o,B19001_0016,Total $150,000 to $199,999
-acs census,Household income in the past 12 months,p,B19001_0017,Total $200,000 or more
-acs census,Educational attainment for the population 25 years and over,nursery,B15003_003,Total Nursery school
-acs census,Educational attainment for the population 25 years and over,kindergarten,B15003_004,Total Kindergarten
-acs census,Educational attainment for the population 25 years and over,first,B15003_005,Total 1st grade
-acs census,Educational attainment for the population 25 years and over,sec,B15003_006,Total 2nd grade
-acs census,Educational attainment for the population 25 years and over,third,B15003_007,Total 3rd grade
-acs census,Educational attainment for the population 25 years and over,fourth,B15003_008,Total 4th grade
-acs census,Educational attainment for the population 25 years and over,fifth,B15003_009,Total 5th grade
-acs census,Educational attainment for the population 25 years and over,six,B15003_010,Total 6th grade
-acs census,Educational attainment for the population 25 years and over,seven,B15003_011,Total 7th grade
-acs census,Educational attainment for the population 25 years and over,eight,B15003_012,Total 8th grade
-acs census,Educational attainment for the population 25 years and over,nine,B15003_013,Total 9th grade
-acs census,Educational attainment for the population 25 years and over,ten,B15003_014,Total 10th grade
-acs census,Educational attainment for the population 25 years and over,eleven,B15003_015,Total 11th grade
-acs census,Educational attainment for the population 25 years and over,twelve,B15003_016,Total 12th grade
-acs census,Educational attainment for the population 25 years and over,hs,B15003_017,Total Regular high school diploma
-acs census,Educational attainment for the population 25 years and over,ged,B15003_018,Total GED or alternative credential
-acs census,Educational attainment for the population 25 years and over,onecollege,B15003_019,Total Some college, less than 1 year
+acs census,Household income in the past 12 months,p,B19001_0017,Total $200,000 or more,
+acs census,Educational attainment for the population 25 years and over,nursery,B15003_003,Total Nursery school,,
+acs census,Educational attainment for the population 25 years and over,kindergarten,B15003_004,Total Kindergarten,,
+acs census,Educational attainment for the population 25 years and over,first,B15003_005,Total 1st grade,,
+acs census,Educational attainment for the population 25 years and over,sec,B15003_006,Total 2nd grade,,
+acs census,Educational attainment for the population 25 years and over,third,B15003_007,Total 3rd grade,,
+acs census,Educational attainment for the population 25 years and over,fourth,B15003_008,Total 4th grade,,
+acs census,Educational attainment for the population 25 years and over,fifth,B15003_009,Total 5th grade,,
+acs census,Educational attainment for the population 25 years and over,six,B15003_010,Total 6th grade,,
+acs census,Educational attainment for the population 25 years and over,seven,B15003_011,Total 7th grade,,
+acs census,Educational attainment for the population 25 years and over,eight,B15003_012,Total 8th grade,,
+acs census,Educational attainment for the population 25 years and over,nine,B15003_013,Total 9th grade,,
+acs census,Educational attainment for the population 25 years and over,ten,B15003_014,Total 10th grade,,
+acs census,Educational attainment for the population 25 years and over,eleven,B15003_015,Total 11th grade,,
+acs census,Educational attainment for the population 25 years and over,twelve,B15003_016,Total 12th grade,,
+acs census,Educational attainment for the population 25 years and over,hs,B15003_017,Total Regular high school diploma,,
+acs census,Educational attainment for the population 25 years and over,ged,B15003_018,Total GED or alternative credential,,
+acs census,Educational attainment for the population 25 years and over,onecollege,B15003_019,Total Some college, less than 1 year,
 acs census,Educational attainment for the population 25 years and over,college,B15003_020,Total Some college, 1 or more years, no degree
-acs census,Educational attainment for the population 25 years and over,assoc,B15003_021,Total Associate's degree
-acs census,Educational attainment for the population 25 years and over,bach,B15003_022,Total Bachelor's degree
-acs census,Educational attainment for the population 25 years and over,master,B15003_023,Total Master's degree
-acs census,Educational attainment for the population 25 years and over,prof,B15003_024,Total Professional school degree
-acs census,Educational attainment for the population 25 years and over,doc,B15003_025,Total Doctorate degree
+acs census,Educational attainment for the population 25 years and over,assoc,B15003_021,Total Associate's degree,,
+acs census,Educational attainment for the population 25 years and over,bach,B15003_022,Total Bachelor's degree,,
+acs census,Educational attainment for the population 25 years and over,master,B15003_023,Total Master's degree,,
+acs census,Educational attainment for the population 25 years and over,prof,B15003_024,Total Professional school degree,,
+acs census,Educational attainment for the population 25 years and over,doc,B15003_025,Total Doctorate degree,,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,all_transportation,B08406_001,tranportation to work all,,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_car,B08406_002,"transportation to work using car, truck or van",,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,tranpo_public,B08406_008,public transportation to work excluding taxicab,,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_bike,B08406_014,tranportation to work biking,,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_walk,B08406_015,transportation to work walking,,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means",,
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_home,B08406_017,"transportation to work - none, worked from home",,
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)",,
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)",,
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account),,
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account),,
