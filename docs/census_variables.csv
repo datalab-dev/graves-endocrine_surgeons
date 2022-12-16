@@ -68,3 +68,24 @@ ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment sta
 ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)",,
 ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account),,
 ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account),,
+acs census,Sex by age,m_under5,B01001_003,Male under 5 years,,
+acs census,Sex by age,m_5to9,B01001_004,Male 5 to 9 years,,
+acs census,Sex by age,m_10to14,B01001_005,Male 10 to 14 years,,
+acs census,Sex by age,m_15to17,B01001_006,Male 15 to 17 years,,
+acs census,Sex by age,m_18to19,B01001_007,Male 18 and 19 years,,
+acs census,Sex by age,m_20,B01001_008,Male 20 years,,
+acs census,Sex by age,m_21,B01001_009,Male 21 years,,
+acs census,Sex by age,m_22to24,B01001_010,Male 22 to 24 years,,
+acs census,Sex by age,m_25to29,B01001_011,Male 25 to 29 years,,
+acs census,Sex by age,m_30to34,B01001_012,Male 30 to 34 years,,
+acs census,Sex by age,m_35to39,B01001_013,Male 35 to 39 years,,
+acs census,Sex by age,m_40to44,B01001_014,Male 40 to 44 years,,
+acs census,Sex by age,m_45to49,B01001_015,Male 45 to 49 years,,
+
+
+
+
+
+
+
+
