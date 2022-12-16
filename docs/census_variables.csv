@@ -114,3 +114,50 @@ acs census,Sex by age,f_70to74,B01001_046,Female 70 to 74 years,,
 acs census,Sex by age,f_75to79,B01001_047,Female 75 to 79 years,,
 acs census,Sex by age,f_80to84,B01001_048,Female 80 to 84 years,,
 acs census,Sex by age,f_85over,B01001_049,Female 85 years and over,,
+acs census,Health insurance coverage status by sex by age,m_under6_yes,B27001_004,Male under 6 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_under6_no,B27001_005,Male under 6 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_6to18_yes,B27001_007,Male 6 to 18 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_6to18_no,B27001_008,Male 6 to 18 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_19to25_yes,B27001_010,Male 19 to 25 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_19to25_no,B27001_011,Male 19 to 25 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_26to34_yes,B27001_013,Male 26 to 34 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_26to34_no,B27001_014,Male 26 to 34 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_35to44_yes,B27001_016,Male 35 to 44 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_35to44_no,B27001_017,Male 35 to 44 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_45to54_yes,B27001_019,Male 45 to 54 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_45to54_no,B27001_020,Male 45 to 54 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_55to64_yes,B27001_022,Male 55 to 64 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_55to64_no,B27001_023,Male 55 to 64 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_65to74_yes,B27001_025,Male 65 to 74 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_65to74_no,B27001_026,Male 65 to 74 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_75over_yes,B27001_028,Male 75 years and over with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,m_75over_no,B27001_029,Male 75 years and over without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_under6_yes,B27001_032,Female under 6 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_under6_no,B27001_033,Female under 6 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_6to18_yes,B27001_035,Female 6 to 18 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_6to18_no,B27001_036,Female 6 to 18 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_19to25_yes,B27001_038,Female 19 to 25 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_19to25_no,B27001_039,Female 19 to 25 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_26to34_yes,B27001_041,Female 26 to 34 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_26to34_no,B27001_042,Female 26 to 34 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_35to44_yes,B27001_044,Female 35 to 44 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_35to44_no,B27001_045,Female 35 to 44 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_45to54_yes,B27001_047,Female 45 to 54 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_45to54_no,B27001_048,Female 45 to 54 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_55to64_yes,B27001_050,Female 55 to 64 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_55to64_no,B27001_051,Female 55 to 64 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_65to74_yes,B27001_053,Female 65 to 74 years with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_65to74_no,B27001_054,Female 65 to 74 years without health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_75over_yes,B27001_056,Female 75 years and over with health insurance coverage,,
+acs census,Health insurance coverage status by sex by age,f_75over_no,B27001_057,Female 75 years and over without health insurance coverage,,
+
+
+
+
+
+
+
+
+
+
+
