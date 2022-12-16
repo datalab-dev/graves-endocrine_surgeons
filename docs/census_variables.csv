@@ -81,6 +81,17 @@ acs census,Sex by age,m_30to34,B01001_012,Male 30 to 34 years,,
 acs census,Sex by age,m_35to39,B01001_013,Male 35 to 39 years,,
 acs census,Sex by age,m_40to44,B01001_014,Male 40 to 44 years,,
 acs census,Sex by age,m_45to49,B01001_015,Male 45 to 49 years,,
+acs census,Sex by age,m_50to54,B01001_016,Male 50 to 54 years,,
+acs census,Sex by age,m_55to59,B01001_017,Male 55 to 59 years,,
+acs census,Sex by age,m_60to61,B01001_018,Male 60 and 61 years,,
+acs census,Sex by age,m_62to64,B01001_019,Male 62 to 64 years,,
+acs census,Sex by age,m_65to66,B01001_020,Male 65 and 66 years,,
+acs census,Sex by age,m_67to69,B01001_021,Male 67 to 69 years,,
+acs census,Sex by age,m_70to74,B01001_022,Male 70 to 74 years,,
+acs census,Sex by age,m_75to79,B01001_023,Male 75 to 79 years,,
+acs census,Sex by age,m_80to84,B01001_024,Male 80 to 84 years,,
+acs census,Sex by age,m_85over,B01001_025,Male 85 years and over,,
+
 
 
 
