@@ -91,12 +91,26 @@ acs census,Sex by age,m_70to74,B01001_022,Male 70 to 74 years,,
 acs census,Sex by age,m_75to79,B01001_023,Male 75 to 79 years,,
 acs census,Sex by age,m_80to84,B01001_024,Male 80 to 84 years,,
 acs census,Sex by age,m_85over,B01001_025,Male 85 years and over,,
-
-
-
-
-
-
-
-
-
+acs census,Sex by age,f_under5,B01001_027,Female under 5 years,,
+acs census,Sex by age,f_5to9,B01001_028,Female 5 to 9 years,,
+acs census,Sex by age,f_10to14,B01001_029,Female 10 to 14 years,,
+acs census,Sex by age,f_15to17,B01001_030,Female 15 to 17 years,,
+acs census,Sex by age,f_18to19,B01001_031,Female 18 and 19 years,,
+acs census,Sex by age,f_20,B01001_032,Female 20 years,,
+acs census,Sex by age,f_21,B01001_033,Female 21 years,,
+acs census,Sex by age,f_22to24,B01001_034,Female 22 to 24 years,,
+acs census,Sex by age,f_25to29,B01001_035,Female 25 to 29 years,,
+acs census,Sex by age,f_30to34,B01001_036,Female 30 to 34 years,,
+acs census,Sex by age,f_35to39,B01001_037,Female 35 to 39 years,,
+acs census,Sex by age,f_40to44,B01001_038,Female 40 to 44 years,,
+acs census,Sex by age,f_45to49,B01001_039,Female 45 to 49 years,,
+acs census,Sex by age,f_50to54,B01001_040,Female 50 to 54 years,,
+acs census,Sex by age,f_55to59,B01001_041,Female 55 to 59 years,,
+acs census,Sex by age,f_60to61,B01001_042,Female 60 and 61 years,,
+acs census,Sex by age,f_62to64,B01001_043,Female 62 to 64 years,,
+acs census,Sex by age,f_65to66,B01001_044,Female 65 and 66 years,,
+acs census,Sex by age,f_67to69,B01001_045,Female 67 to 69 years,,
+acs census,Sex by age,f_70to74,B01001_046,Female 70 to 74 years,,
+acs census,Sex by age,f_75to79,B01001_047,Female 75 to 79 years,,
+acs census,Sex by age,f_80to84,B01001_048,Female 80 to 84 years,,
+acs census,Sex by age,f_85over,B01001_049,Female 85 years and over,,
