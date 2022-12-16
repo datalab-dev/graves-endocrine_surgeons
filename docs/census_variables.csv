@@ -50,8 +50,8 @@ acs census,Educational attainment for the population 25 years and over,eleven,B1
 acs census,Educational attainment for the population 25 years and over,twelve,B15003_016,Total 12th grade,,
 acs census,Educational attainment for the population 25 years and over,hs,B15003_017,Total Regular high school diploma,,
 acs census,Educational attainment for the population 25 years and over,ged,B15003_018,Total GED or alternative credential,,
-acs census,Educational attainment for the population 25 years and over,onecollege,B15003_019,Total Some college, less than 1 year,
-acs census,Educational attainment for the population 25 years and over,college,B15003_020,Total Some college, 1 or more years, no degree
+acs census,Educational attainment for the population 25 years and over,onecollege,B15003_019,"Total Some college, less than 1 year",
+acs census,Educational attainment for the population 25 years and over,college,B15003_020,"Total Some college, 1 or more years, no degree"
 acs census,Educational attainment for the population 25 years and over,assoc,B15003_021,Total Associate's degree,,
 acs census,Educational attainment for the population 25 years and over,bach,B15003_022,Total Bachelor's degree,,
 acs census,Educational attainment for the population 25 years and over,master,B15003_023,Total Master's degree,,
