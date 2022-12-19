@@ -1,163 +1,155 @@
-Source,Category,column_name,census_variable,description,,
-decennial census,Race,all,P2_001N,All,,
-decennial census,Race,hisp,P2_002N,Hispanic,,
-decennial census,Race,white,P2_005N,White,,
-decennial census,Race,baa,P2_006N,Black or African American,,
-decennial census,Race,amin,P2_007N,American Indian,,
-decennial census,Race,asian,P2_008N,Asian,,
-decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander,,
-decennial census,Race,other,P2_010N,Some Other Race,,
-decennial census,Race,multi,P2_011N,Two or More Races,,
-decennial census,Hispanic origin,hisp,P2_002N,Hispanic,,
-decennial census,Hispanic origin,all,P2_003N,Not Hispanic,,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_001,total,,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_002,"U.S. citizen, born in the United States",,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas",,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_004,"U.S. citizen, born abroad of American parent(s)",,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_005,U.S. citizen by naturalization,,
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,,B05001_006,Not a U.S. citizen,,
-acs census,Sex by age,m,B01001_002,Male of all ages,,
-acs census,Sex by age,f,B01001_026,Female of all ages,,
-acs census,Household income in the past 12 months,income_10k,B19001_002,"Total Less than $10,0000",,
-acs census,Household income in the past 12 months,income_10_15k,B19001_003,"Total $10,000 to $14,999",,
-acs census,Household income in the past 12 months,income_15_20k,B19001_004,"Total $15,000 to $19,999",,
-acs census,Household income in the past 12 months,income_20_25k,B19001_005,"Total $20,000 to $24,999",,
-acs census,Household income in the past 12 months,income_25_30k,B19001_006,"Total $25,000 to $29,999",,
-acs census,Household income in the past 12 months,income_30_35k,B19001_007,"Total $30,000 to $34,999",,
-acs census,Household income in the past 12 months,income_35_40k,B19001_008,"Total $35,000 to $39,999",,
-acs census,Household income in the past 12 months,income_40_45k,B19001_009,"Total $40,000 to $44,999",,
-acs census,Household income in the past 12 months,income_45_50k,B19001_0010,"Total $45,000 to $49,999",,
-acs census,Household income in the past 12 months,income_50_60k,B19001_0011,"Total $50,000 to $59,999",,
-acs census,Household income in the past 12 months,income_60_75k,B19001_0012,"Total $60,000 to $74,999",,
-acs census,Household income in the past 12 months,income_75_100k,B19001_0013,"Total $75,000 to $99,999",,
-acs census,Household income in the past 12 months,income_100_125k,B19001_0014,"Total $100,000 to $124,999",,
-acs census,Household income in the past 12 months,income_125_150k,B19001_0015,"Total $125,000 to $149,999",,
-acs census,Household income in the past 12 months,income_150_200k,B19001_0016,"Total $150,000 to $199,999",,
-acs census,Household income in the past 12 months,income_200k,B19001_0017,"Total $200,000 or more",,
-acs census,Educational attainment for the population 25 years and over,edu_nursery,B15003_003,Total Nursery school,,
-acs census,Educational attainment for the population 25 years and over,edu_kindergarten,B15003_004,Total Kindergarten,,
-acs census,Educational attainment for the population 25 years and over,edu_first,B15003_005,Total 1st grade,,
-acs census,Educational attainment for the population 25 years and over,edu_sec,B15003_006,Total 2nd grade,,
-acs census,Educational attainment for the population 25 years and over,edu_third,B15003_007,Total 3rd grade,,
-acs census,Educational attainment for the population 25 years and over,edu_fourth,B15003_008,Total 4th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_fifth,B15003_009,Total 5th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_six,B15003_010,Total 6th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_seven,B15003_011,Total 7th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_eight,B15003_012,Total 8th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_nine,B15003_013,Total 9th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_ten,B15003_014,Total 10th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_eleven,B15003_015,Total 11th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_twelve,B15003_016,Total 12th grade,,
-acs census,Educational attainment for the population 25 years and over,edu_hs,B15003_017,Total Regular high school diploma,,
-acs census,Educational attainment for the population 25 years and over,edu_ged,B15003_018,Total GED or alternative credential,,
-acs census,Educational attainment for the population 25 years and over,edu_onecollege,B15003_019,"Total Some college, less than 1 year",,
-acs census,Educational attainment for the population 25 years and over,edu_college,B15003_020,"Total Some college, 1 or more years, no degree",,
-acs census,Educational attainment for the population 25 years and over,edu_assoc,B15003_021,Total Associate's degree,,
-acs census,Educational attainment for the population 25 years and over,edu_bach,B15003_022,Total Bachelor's degree,,
-acs census,Educational attainment for the population 25 years and over,edu_master,B15003_023,Total Master's degree,,
-acs census,Educational attainment for the population 25 years and over,edu_prof,B15003_024,Total Professional school degree,,
-acs census,Educational attainment for the population 25 years and over,edu_doc,B15003_025,Total Doctorate degree,,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,all_transportation,B08406_001,tranportation to work all,,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_car,B08406_002,"transportation to work using car, truck or van",,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,tranpo_public,B08406_008,public transportation to work excluding taxicab,,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_bike,B08406_014,tranportation to work biking,,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_walk,B08406_015,transportation to work walking,,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means",,
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_home,B08406_017,"transportation to work - none, worked from home",,
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)",,
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)",,
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account),,
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account),,
-acs census,Sex by age,m_under5,B01001_003,Male under 5 years,,
-acs census,Sex by age,m_5to9,B01001_004,Male 5 to 9 years,,
-acs census,Sex by age,m_10to14,B01001_005,Male 10 to 14 years,,
-acs census,Sex by age,m_15to17,B01001_006,Male 15 to 17 years,,
-acs census,Sex by age,m_18to19,B01001_007,Male 18 and 19 years,,
-acs census,Sex by age,m_20,B01001_008,Male 20 years,,
-acs census,Sex by age,m_21,B01001_009,Male 21 years,,
-acs census,Sex by age,m_22to24,B01001_010,Male 22 to 24 years,,
-acs census,Sex by age,m_25to29,B01001_011,Male 25 to 29 years,,
-acs census,Sex by age,m_30to34,B01001_012,Male 30 to 34 years,,
-acs census,Sex by age,m_35to39,B01001_013,Male 35 to 39 years,,
-acs census,Sex by age,m_40to44,B01001_014,Male 40 to 44 years,,
-acs census,Sex by age,m_45to49,B01001_015,Male 45 to 49 years,,
-acs census,Sex by age,m_50to54,B01001_016,Male 50 to 54 years,,
-acs census,Sex by age,m_55to59,B01001_017,Male 55 to 59 years,,
-acs census,Sex by age,m_60to61,B01001_018,Male 60 and 61 years,,
-acs census,Sex by age,m_62to64,B01001_019,Male 62 to 64 years,,
-acs census,Sex by age,m_65to66,B01001_020,Male 65 and 66 years,,
-acs census,Sex by age,m_67to69,B01001_021,Male 67 to 69 years,,
-acs census,Sex by age,m_70to74,B01001_022,Male 70 to 74 years,,
-acs census,Sex by age,m_75to79,B01001_023,Male 75 to 79 years,,
-acs census,Sex by age,m_80to84,B01001_024,Male 80 to 84 years,,
-acs census,Sex by age,m_85over,B01001_025,Male 85 years and over,,
-acs census,Sex by age,f_under5,B01001_027,Female under 5 years,,
-acs census,Sex by age,f_5to9,B01001_028,Female 5 to 9 years,,
-acs census,Sex by age,f_10to14,B01001_029,Female 10 to 14 years,,
-acs census,Sex by age,f_15to17,B01001_030,Female 15 to 17 years,,
-acs census,Sex by age,f_18to19,B01001_031,Female 18 and 19 years,,
-acs census,Sex by age,f_20,B01001_032,Female 20 years,,
-acs census,Sex by age,f_21,B01001_033,Female 21 years,,
-acs census,Sex by age,f_22to24,B01001_034,Female 22 to 24 years,,
-acs census,Sex by age,f_25to29,B01001_035,Female 25 to 29 years,,
-acs census,Sex by age,f_30to34,B01001_036,Female 30 to 34 years,,
-acs census,Sex by age,f_35to39,B01001_037,Female 35 to 39 years,,
-acs census,Sex by age,f_40to44,B01001_038,Female 40 to 44 years,,
-acs census,Sex by age,f_45to49,B01001_039,Female 45 to 49 years,,
-acs census,Sex by age,f_50to54,B01001_040,Female 50 to 54 years,,
-acs census,Sex by age,f_55to59,B01001_041,Female 55 to 59 years,,
-acs census,Sex by age,f_60to61,B01001_042,Female 60 and 61 years,,
-acs census,Sex by age,f_62to64,B01001_043,Female 62 to 64 years,,
-acs census,Sex by age,f_65to66,B01001_044,Female 65 and 66 years,,
-acs census,Sex by age,f_67to69,B01001_045,Female 67 to 69 years,,
-acs census,Sex by age,f_70to74,B01001_046,Female 70 to 74 years,,
-acs census,Sex by age,f_75to79,B01001_047,Female 75 to 79 years,,
-acs census,Sex by age,f_80to84,B01001_048,Female 80 to 84 years,,
-acs census,Sex by age,f_85over,B01001_049,Female 85 years and over,,
-acs census,Health insurance coverage status by sex by age,m_under6_yes,B27001_004,Male under 6 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_under6_no,B27001_005,Male under 6 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_6to18_yes,B27001_007,Male 6 to 18 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_6to18_no,B27001_008,Male 6 to 18 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_19to25_yes,B27001_010,Male 19 to 25 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_19to25_no,B27001_011,Male 19 to 25 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_26to34_yes,B27001_013,Male 26 to 34 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_26to34_no,B27001_014,Male 26 to 34 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_35to44_yes,B27001_016,Male 35 to 44 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_35to44_no,B27001_017,Male 35 to 44 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_45to54_yes,B27001_019,Male 45 to 54 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_45to54_no,B27001_020,Male 45 to 54 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_55to64_yes,B27001_022,Male 55 to 64 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_55to64_no,B27001_023,Male 55 to 64 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_65to74_yes,B27001_025,Male 65 to 74 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_65to74_no,B27001_026,Male 65 to 74 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_75over_yes,B27001_028,Male 75 years and over with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,m_75over_no,B27001_029,Male 75 years and over without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_under6_yes,B27001_032,Female under 6 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_under6_no,B27001_033,Female under 6 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_6to18_yes,B27001_035,Female 6 to 18 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_6to18_no,B27001_036,Female 6 to 18 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_19to25_yes,B27001_038,Female 19 to 25 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_19to25_no,B27001_039,Female 19 to 25 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_26to34_yes,B27001_041,Female 26 to 34 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_26to34_no,B27001_042,Female 26 to 34 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_35to44_yes,B27001_044,Female 35 to 44 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_35to44_no,B27001_045,Female 35 to 44 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_45to54_yes,B27001_047,Female 45 to 54 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_45to54_no,B27001_048,Female 45 to 54 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_55to64_yes,B27001_050,Female 55 to 64 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_55to64_no,B27001_051,Female 55 to 64 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_65to74_yes,B27001_053,Female 65 to 74 years with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_65to74_no,B27001_054,Female 65 to 74 years without health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_75over_yes,B27001_056,Female 75 years and over with health insurance coverage,,
-acs census,Health insurance coverage status by sex by age,f_75over_no,B27001_057,Female 75 years and over without health insurance coverage,,
-
-
-
-
-
-
-
-
-
-
-
+Source,Category,column_name,census_variable,description
+decennial census,Race,all,P2_001N,All
+decennial census,Race,hisp,P2_002N,Hispanic
+decennial census,Race,white,P2_005N,White
+decennial census,Race,baa,P2_006N,Black or African American
+decennial census,Race,amin,P2_007N,American Indian
+decennial census,Race,asian,P2_008N,Asian
+decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
+decennial census,Race,other,P2_010N,Some Other Race
+decennial census,Race,multi,P2_011N,Two or More Races
+decennial census,Hispanic origin,hisp,P2_002N,Hispanic
+decennial census,Hispanic origin,all,P2_003N,Not Hispanic
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,total_citizenship,B05001_001,total
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_nature,B05001_005,U.S. citizen by naturalization
+ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,not_citizen,B05001_006,Not a U.S. citizen
+acs census,Sex by age,m,B01001_002,Male of all ages
+acs census,Sex by age,f,B01001_026,Female of all ages
+acs census,Household income in the past 12 months,income_10k,B19001_002,"Total Less than $10,0000"
+acs census,Household income in the past 12 months,income_10_15k,B19001_003,"Total $10,000 to $14,999"
+acs census,Household income in the past 12 months,income_15_20k,B19001_004,"Total $15,000 to $19,999"
+acs census,Household income in the past 12 months,income_20_25k,B19001_005,"Total $20,000 to $24,999"
+acs census,Household income in the past 12 months,income_25_30k,B19001_006,"Total $25,000 to $29,999"
+acs census,Household income in the past 12 months,income_30_35k,B19001_007,"Total $30,000 to $34,999"
+acs census,Household income in the past 12 months,income_35_40k,B19001_008,"Total $35,000 to $39,999"
+acs census,Household income in the past 12 months,income_40_45k,B19001_009,"Total $40,000 to $44,999"
+acs census,Household income in the past 12 months,income_45_50k,B19001_0010,"Total $45,000 to $49,999"
+acs census,Household income in the past 12 months,income_50_60k,B19001_0011,"Total $50,000 to $59,999"
+acs census,Household income in the past 12 months,income_60_75k,B19001_0012,"Total $60,000 to $74,999"
+acs census,Household income in the past 12 months,income_75_100k,B19001_0013,"Total $75,000 to $99,999"
+acs census,Household income in the past 12 months,income_100_125k,B19001_0014,"Total $100,000 to $124,999"
+acs census,Household income in the past 12 months,income_125_150k,B19001_0015,"Total $125,000 to $149,999"
+acs census,Household income in the past 12 months,income_150_200k,B19001_0016,"Total $150,000 to $199,999"
+acs census,Household income in the past 12 months,income_200k,B19001_0017,"Total $200,000 or more"
+acs census,Educational attainment for the population 25 years and over,edu_nursery,B15003_003,Total Nursery school
+acs census,Educational attainment for the population 25 years and over,edu_kindergarten,B15003_004,Total Kindergarten
+acs census,Educational attainment for the population 25 years and over,edu_first,B15003_005,Total 1st grade
+acs census,Educational attainment for the population 25 years and over,edu_sec,B15003_006,Total 2nd grade
+acs census,Educational attainment for the population 25 years and over,edu_third,B15003_007,Total 3rd grade
+acs census,Educational attainment for the population 25 years and over,edu_fourth,B15003_008,Total 4th grade
+acs census,Educational attainment for the population 25 years and over,edu_fifth,B15003_009,Total 5th grade
+acs census,Educational attainment for the population 25 years and over,edu_six,B15003_010,Total 6th grade
+acs census,Educational attainment for the population 25 years and over,edu_seven,B15003_011,Total 7th grade
+acs census,Educational attainment for the population 25 years and over,edu_eight,B15003_012,Total 8th grade
+acs census,Educational attainment for the population 25 years and over,edu_nine,B15003_013,Total 9th grade
+acs census,Educational attainment for the population 25 years and over,edu_ten,B15003_014,Total 10th grade
+acs census,Educational attainment for the population 25 years and over,edu_eleven,B15003_015,Total 11th grade
+acs census,Educational attainment for the population 25 years and over,edu_twelve,B15003_016,Total 12th grade
+acs census,Educational attainment for the population 25 years and over,edu_hs,B15003_017,Total Regular high school diploma
+acs census,Educational attainment for the population 25 years and over,edu_ged,B15003_018,Total GED or alternative credential
+acs census,Educational attainment for the population 25 years and over,edu_onecollege,B15003_019,"Total Some college, less than 1 year"
+acs census,Educational attainment for the population 25 years and over,edu_college,B15003_020,"Total Some college, 1 or more years, no degree"
+acs census,Educational attainment for the population 25 years and over,edu_assoc,B15003_021,Total Associate's degree
+acs census,Educational attainment for the population 25 years and over,edu_bach,B15003_022,Total Bachelor's degree
+acs census,Educational attainment for the population 25 years and over,edu_master,B15003_023,Total Master's degree
+acs census,Educational attainment for the population 25 years and over,edu_prof,B15003_024,Total Professional school degree
+acs census,Educational attainment for the population 25 years and over,edu_doc,B15003_025,Total Doctorate degree
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,all_transportation,B08406_001,tranportation to work all
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_car,B08406_002,"transportation to work using car, truck or van"
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,tranpo_public,B08406_008,public transportation to work excluding taxicab
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_bike,B08406_014,tranportation to work biking
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_walk,B08406_015,transportation to work walking
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means"
+ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_home,B08406_017,"transportation to work - none, worked from home"
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)"
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)"
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account)
+ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account)
+acs census,Sex by age,m_under5,B01001_003,Male under 5 years
+acs census,Sex by age,m_5to9,B01001_004,Male 5 to 9 years
+acs census,Sex by age,m_10to14,B01001_005,Male 10 to 14 years
+acs census,Sex by age,m_15to17,B01001_006,Male 15 to 17 years
+acs census,Sex by age,m_18to19,B01001_007,Male 18 and 19 years
+acs census,Sex by age,m_20,B01001_008,Male 20 years
+acs census,Sex by age,m_21,B01001_009,Male 21 years
+acs census,Sex by age,m_22to24,B01001_010,Male 22 to 24 years
+acs census,Sex by age,m_25to29,B01001_011,Male 25 to 29 years
+acs census,Sex by age,m_30to34,B01001_012,Male 30 to 34 years
+acs census,Sex by age,m_35to39,B01001_013,Male 35 to 39 years
+acs census,Sex by age,m_40to44,B01001_014,Male 40 to 44 years
+acs census,Sex by age,m_45to49,B01001_015,Male 45 to 49 years
+acs census,Sex by age,m_50to54,B01001_016,Male 50 to 54 years
+acs census,Sex by age,m_55to59,B01001_017,Male 55 to 59 years
+acs census,Sex by age,m_60to61,B01001_018,Male 60 and 61 years
+acs census,Sex by age,m_62to64,B01001_019,Male 62 to 64 years
+acs census,Sex by age,m_65to66,B01001_020,Male 65 and 66 years
+acs census,Sex by age,m_67to69,B01001_021,Male 67 to 69 years
+acs census,Sex by age,m_70to74,B01001_022,Male 70 to 74 years
+acs census,Sex by age,m_75to79,B01001_023,Male 75 to 79 years
+acs census,Sex by age,m_80to84,B01001_024,Male 80 to 84 years
+acs census,Sex by age,m_85over,B01001_025,Male 85 years and over
+acs census,Sex by age,f_under5,B01001_027,Female under 5 years
+acs census,Sex by age,f_5to9,B01001_028,Female 5 to 9 years
+acs census,Sex by age,f_10to14,B01001_029,Female 10 to 14 years
+acs census,Sex by age,f_15to17,B01001_030,Female 15 to 17 years
+acs census,Sex by age,f_18to19,B01001_031,Female 18 and 19 years
+acs census,Sex by age,f_20,B01001_032,Female 20 years
+acs census,Sex by age,f_21,B01001_033,Female 21 years
+acs census,Sex by age,f_22to24,B01001_034,Female 22 to 24 years
+acs census,Sex by age,f_25to29,B01001_035,Female 25 to 29 years
+acs census,Sex by age,f_30to34,B01001_036,Female 30 to 34 years
+acs census,Sex by age,f_35to39,B01001_037,Female 35 to 39 years
+acs census,Sex by age,f_40to44,B01001_038,Female 40 to 44 years
+acs census,Sex by age,f_45to49,B01001_039,Female 45 to 49 years
+acs census,Sex by age,f_50to54,B01001_040,Female 50 to 54 years
+acs census,Sex by age,f_55to59,B01001_041,Female 55 to 59 years
+acs census,Sex by age,f_60to61,B01001_042,Female 60 and 61 years
+acs census,Sex by age,f_62to64,B01001_043,Female 62 to 64 years
+acs census,Sex by age,f_65to66,B01001_044,Female 65 and 66 years
+acs census,Sex by age,f_67to69,B01001_045,Female 67 to 69 years
+acs census,Sex by age,f_70to74,B01001_046,Female 70 to 74 years
+acs census,Sex by age,f_75to79,B01001_047,Female 75 to 79 years
+acs census,Sex by age,f_80to84,B01001_048,Female 80 to 84 years
+acs census,Sex by age,f_85over,B01001_049,Female 85 years and over
+acs census,Health insurance coverage status by sex by age,m_under6_yes,B27001_004,Male under 6 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_under6_no,B27001_005,Male under 6 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_6to18_yes,B27001_007,Male 6 to 18 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_6to18_no,B27001_008,Male 6 to 18 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_19to25_yes,B27001_010,Male 19 to 25 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_19to25_no,B27001_011,Male 19 to 25 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_26to34_yes,B27001_013,Male 26 to 34 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_26to34_no,B27001_014,Male 26 to 34 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_35to44_yes,B27001_016,Male 35 to 44 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_35to44_no,B27001_017,Male 35 to 44 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_45to54_yes,B27001_019,Male 45 to 54 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_45to54_no,B27001_020,Male 45 to 54 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_55to64_yes,B27001_022,Male 55 to 64 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_55to64_no,B27001_023,Male 55 to 64 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_65to74_yes,B27001_025,Male 65 to 74 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_65to74_no,B27001_026,Male 65 to 74 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_75over_yes,B27001_028,Male 75 years and over with health insurance coverage
+acs census,Health insurance coverage status by sex by age,m_75over_no,B27001_029,Male 75 years and over without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_under6_yes,B27001_032,Female under 6 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_under6_no,B27001_033,Female under 6 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_6to18_yes,B27001_035,Female 6 to 18 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_6to18_no,B27001_036,Female 6 to 18 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_19to25_yes,B27001_038,Female 19 to 25 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_19to25_no,B27001_039,Female 19 to 25 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_26to34_yes,B27001_041,Female 26 to 34 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_26to34_no,B27001_042,Female 26 to 34 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_35to44_yes,B27001_044,Female 35 to 44 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_35to44_no,B27001_045,Female 35 to 44 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_45to54_yes,B27001_047,Female 45 to 54 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_45to54_no,B27001_048,Female 45 to 54 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_55to64_yes,B27001_050,Female 55 to 64 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_55to64_no,B27001_051,Female 55 to 64 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_65to74_yes,B27001_053,Female 65 to 74 years with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_65to74_no,B27001_054,Female 65 to 74 years without health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_75over_yes,B27001_056,Female 75 years and over with health insurance coverage
+acs census,Health insurance coverage status by sex by age,f_75over_no,B27001_057,Female 75 years and over without health insurance coverage
+ACS 5,Estimate!!Total:,total_poverty_status,,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+ACS 5,Estimate!!Total:!!Income in the past 12 months below poverty level:,below_poverty,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+ACS 5,Estimate!!Total:!!Income in the past 12 months at or above poverty level:,at_above_poverty,B17001_031,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
