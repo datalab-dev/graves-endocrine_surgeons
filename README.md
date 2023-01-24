@@ -41,7 +41,7 @@ Sebastian Lopez - Student Employee
 
 ## GitHub Repository File and Directory Structure
 
-The (planned) directory structure for the project is:
+The directory structure for the project is:
 
 ```
 LICENSE                                         Currently unvavailable
