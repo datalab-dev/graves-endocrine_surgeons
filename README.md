@@ -44,8 +44,9 @@ Sebastian Lopez - Student Employee
 The (planned) directory structure for the project is:
 
 ```
-LICENSE
-README.md
+LICENSE                                         Currently unvavailable
+README.md                                       Project overview document
+.gitignore                                      A file listing files to ignore for version control (git) processes
 data/                                           Data sets (files > 1MB go on Google Drive)
   |--- geocoded_addresses_2022-06-29_144609.csv Surgeon's office addresses geocoded by Geocodio and by hand using Google Maps; output from combine_geocoding_results.R
   |--- isochrones_120_min.rds                   120-minute isochrone (access boundary); output from compute_isochrones.R
