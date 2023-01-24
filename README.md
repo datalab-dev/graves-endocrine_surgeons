@@ -13,6 +13,31 @@ project.
 This repository contains code for Claire Graves' **Endocrine Surgery Access** project. The
 project uses surgeon address data as well as population, demographic, and socioeconomic data from the US Census to understand the distribution of endocrine surgeons in relation to the US population. The goal of our collaboration is is to better understand the distribution of endocrine surgery centers in the United States and who has access to these centers.  The larger goal of this work is to reduce the barriers for patients to access care requiring an endocrine surgeon.
 
+## Collaborators
+
+### Domain Team
+
+Claire Graves, M.D. - Department of Surgery, University of California Davis
+
+Maeve Alterio - Washington State University Elson S. Floyd College of Medicine
+
+Alexis Woods, M.D. - Department of Surgery, University of California Davis
+
+Kiyomi Sun - Department of Surgery, University of California Davis
+
+Michael Campbell, M.D. - Department of Surgery, University of California Davis
+
+
+### DataLab Team
+
+Michele Tobias, PhD - Geospatial Data Specialist 
+
+Arthur Koehl - Data Scientist
+
+Alison Wong - Student Employee
+
+Sebastian Lopez - Student Employee
+
 
 ## GitHub Repository File and Directory Structure
 
