@@ -80,8 +80,6 @@ The response, which will print to your console, will be a large JSON document. I
 
 If you get a response that is a networking error reported by `curl`, i.e the request didn’t get through, then this means that there was an issue with the container itself. To debug this, look at the messages in the container’s log file, see step 6 above. Additionally, use `docker ps` and `docker ps -a` to confirm that the container is up and running. In my experience, when Valhalla wasn’t properly built, submitting requests would sometimes shut down the container.
 
-If you are on the library’s network, e.g on the library staff VPN, you should be able to interact with the docker container on the `[datasci.library.ucdavis.edu](http://datasci.library.ucdavis.edu)` server. Simply replace `[localhost](http://localhost)` in any request with `datasci.library.ucdavis.edu`
-
 ## Useful Links
 
 Valhalla Overview - [https://valhalla.readthedocs.io/en/latest/valhalla-intro/](https://valhalla.readthedocs.io/en/latest/valhalla-intro/)
