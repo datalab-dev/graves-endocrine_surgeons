@@ -46,9 +46,23 @@ The (planned) directory structure for the project is:
 ```
 LICENSE
 README.md
-data/         Data sets (files > 1MB go on Google Drive)
-docs/         Supporting documents - documentation of the process of setting up Valhalla with Docker on the DataLab server
-R/            R source code
+data/                                           Data sets (files > 1MB go on Google Drive)
+  |--- geocoded_addresses_2022-06-29_144609.csv Surgeon's office addresses geocoded by Geocodio and by hand using Google Maps; output from combine_geocoding_results.R
+  |--- isochrones_120_min.rds                   120-minute isochrone (access boundary); output from compute_isochrones.R
+  |--- isochrones_60_min.rds                    60-minute isochrone (access boundary); output from compute_isochrones.R
+  |--- isochrones_90_min.rds                    90-minute isochrone (access boundary); output from compute_isochrones.R
+  |--- tract_population.rds                     Census tracts containing population calculation for each isochrone; output from access_calculation.R
+docs/                                           Supporting documents - documentation of the process of setting up Valhalla with Docker on the DataLab server
+  |--- census_variables.csv                     Variables downloaded in the second stage of this project from the R TidyCensus package
+  |--- docker_installation.md                   Instructions for how to set up docker on the DataLab server
+  |--- valhalla_installation.md                 Instructions for how to set up Valhalla on the DataLab server
+R/                                              R source code
+  |--- access_calculation.R                     Calculates the intersection of the isochrone boundaries and the census tracts, then calculates the population in each polygon created
+  |--- census_data.R                            Downloads the census data from the TidyCensus package
+  |--- combine_geocoding_results.R              A script to join the output from Geocodio and the hand geocoding process
+  |--- compute_isochrones.R                     Computes the isochrone boundaries using Valhalla
+  |--- distance_method_demo.R                   A script used at the beginning of this project to communicate the proposed methods
+  |--- write_isochrone_to_geopackage.R          Combines the data in the isochrone .rds files to make one geopackage for ease of use in QGIS for mapmaking
 ```
 
 <!--
