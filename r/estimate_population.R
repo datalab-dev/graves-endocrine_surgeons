@@ -6,17 +6,48 @@ library(stringr)
 library(tidycensus)
 library(tidyverse)
 
-# list files from directory
-files <- list.files("~/Downloads/endocrine access projecgt gpkg/", pattern="*.gpkg", full.names=TRUE)
-ldf <- lapply(files, st_read)
-ldf <- lapply(ldf, st_drop_geometry) # Remove geometry to decrease run time
-filenames <- list.files("~/Downloads/endocrine access projecgt gpkg/", pattern="*.gpkg", full.names=FALSE)
+# Read chosen census variable from csv
+setwd("~/git/graves-endocrine_surgeons")
+census_var <- read.csv("docs/census_variables.csv")
+
+# Vector of all states
+all_fips <- c(1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 72) #72 is PR
+
+# Seperate decennial census and acs census variables into 2 vectors to be used to pull data from the tidycensus
+acs_var <- census_var %>%
+  filter(., Source == "acs census") %>%
+  pull(census_variable, column_name)
+
+decennial_var <- census_var %>%
+  filter(., Source == "decennial census") %>%
+  pull(census_variable, column_name)
+
+# Vector used to arrange the final table
+acs_var_order <- names(acs_var)
+dec_var_order <- names(decennial_var)
 
 # Load ACS census 2020 variables
 vars_acs <- load_variables(2020, "acs5", cache=TRUE)
 
-# All states
-all_fips <- c(1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 72) #72 is PR
+# Load pl table available from 2020 decennial census - only one available so far
+vars_dec <- load_variables(2020, "pl")
+
+acs_census <-get_acs(
+  geography="tract", 
+  survey="acs5",
+  year = 2020,
+  variable=acs_var, 
+  state=all_fips,
+  geometry= F)
+
+dec_census <- get_decennial(
+  geography = 'tract',
+  variables = decennial_var,
+  year = 2020,
+  geometry = F,
+  cache_table = TRUE,
+  state = all_fips
+)
 
 # Income variable
 income_var <- c(income_10k="B19001_002",
@@ -36,7 +67,6 @@ income_var <- c(income_10k="B19001_002",
                 income_150_200k="B19001_016",
                 income_200k="B19001_017")
 
-# vector used to arrange the final table
 income_order <- c("income_10k",
                   "income_10_15k",
                   "income_15_20k",
@@ -62,6 +92,12 @@ income <-get_acs(
   state=all_fips,
   geometry= F)
 
+# list files from directory
+files <- list.files("data/gpkg/", pattern="*.gpkg", full.names=TRUE)
+ldf <- lapply(files, st_read)
+ldf <- lapply(ldf, st_drop_geometry) # Remove geometry to decrease run time
+filenames <- list.files("~data/gpkg/", pattern="*.gpkg", full.names=FALSE)
+
 # Left join census income table to tracts table where each isochrone (inside & ouside) is a list within the join_income_list
 join_income_list <- list()
 
@@ -81,6 +117,7 @@ for (i in 1:length(join_income_list)){
   name <- filenames[[i]]
   income_estimate_list[[name]] <- income_tract
 }
+income_estimate_list # ADD GEOID
 
 # Group all the income groups to one for each sublist
 group_income_list <- list()
@@ -136,13 +173,8 @@ for (i in 1:length(group_income_list)){
       arrange(factor(income_factor))
   }
 }
-
 isochrone_120
 isochrone_90
 isochrone_60
-
-#
-
-
 
 
