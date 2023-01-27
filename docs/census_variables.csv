@@ -10,12 +10,12 @@ decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
 decennial census,Hispanic origin,all,P2_003N,Not Hispanic
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,total_citizenship,B05001_001,total
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_nature,B05001_005,U.S. citizen by naturalization
-ASC 5,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,not_citizen,B05001_006,Not a U.S. citizen
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,total_citizenship,B05001_001,total
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,citizen_nature,B05001_005,U.S. citizen by naturalization
+acs census,NATIVITY AND CITIZENSHIP STATUS IN THE UNITED STATES,not_citizen,B05001_006,Not a U.S. citizen
 acs census,Sex by age,m,B01001_002,Male of all ages
 acs census,Sex by age,f,B01001_026,Female of all ages
 acs census,Household income in the past 12 months,income_10k,B19001_002,"Total Less than $10,0000"
@@ -57,17 +57,17 @@ acs census,Educational attainment for the population 25 years and over,edu_bach,
 acs census,Educational attainment for the population 25 years and over,edu_master,B15003_023,Total Master's degree
 acs census,Educational attainment for the population 25 years and over,edu_prof,B15003_024,Total Professional school degree
 acs census,Educational attainment for the population 25 years and over,edu_doc,B15003_025,Total Doctorate degree
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,all_transportation,B08406_001,tranportation to work all
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_car,B08406_002,"transportation to work using car, truck or van"
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,tranpo_public,B08406_008,public transportation to work excluding taxicab
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_bike,B08406_014,tranportation to work biking
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_walk,B08406_015,transportation to work walking
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means"
-ASC 5,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_home,B08406_017,"transportation to work - none, worked from home"
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)"
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)"
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account)
-ASC 5,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account)
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,all_transportation,B08406_001,tranportation to work all
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_car,B08406_002,"transportation to work using car, truck or van"
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,tranpo_public,B08406_008,public transportation to work excluding taxicab
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_bike,B08406_014,tranportation to work biking
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_walk,B08406_015,transportation to work walking
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means"
+acs census,SEX OF WORKERS BY MEANS OF TRANSPORTATION TO WORK FOR WORKPLACE GEOGRAPHY,transpo_home,B08406_017,"transportation to work - none, worked from home"
+acs census,EMPLOYMENT STATUS BY DISABILITY STATUS,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)"
+acs census,EMPLOYMENT STATUS BY DISABILITY STATUS,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)"
+acs census,EMPLOYMENT STATUS BY DISABILITY STATUS,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account)
+acs census,EMPLOYMENT STATUS BY DISABILITY STATUS,inlaborforce,C18120_002,Part of workforce (disability not taken into account)
 acs census,Sex by age,m_under5,B01001_003,Male under 5 years
 acs census,Sex by age,m_5to9,B01001_004,Male 5 to 9 years
 acs census,Sex by age,m_10to14,B01001_005,Male 10 to 14 years
@@ -150,6 +150,6 @@ acs census,Health insurance coverage status by sex by age,f_65to74_yes,B27001_05
 acs census,Health insurance coverage status by sex by age,f_65to74_no,B27001_054,Female 65 to 74 years without health insurance coverage
 acs census,Health insurance coverage status by sex by age,f_75over_yes,B27001_056,Female 75 years and over with health insurance coverage
 acs census,Health insurance coverage status by sex by age,f_75over_no,B27001_057,Female 75 years and over without health insurance coverage
-ACS 5,Estimate!!Total:,total_poverty_status,,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
-ACS 5,Estimate!!Total:!!Income in the past 12 months below poverty level:,below_poverty,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
-ACS 5,Estimate!!Total:!!Income in the past 12 months at or above poverty level:,at_above_poverty,B17001_031,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+acs census,Estimate!!Total:,total_poverty_status,,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+acs census,Estimate!!Total:!!Income in the past 12 months below poverty level:,below_poverty,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+acs census,Estimate!!Total:!!Income in the past 12 months at or above poverty level:,at_above_poverty,B17001_031,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
