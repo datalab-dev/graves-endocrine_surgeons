@@ -150,6 +150,6 @@ acs census,Health insurance coverage status by sex by age,f_65to74_yes,B27001_05
 acs census,Health insurance coverage status by sex by age,f_65to74_no,B27001_054,Female 65 to 74 years without health insurance coverage
 acs census,Health insurance coverage status by sex by age,f_75over_yes,B27001_056,Female 75 years and over with health insurance coverage
 acs census,Health insurance coverage status by sex by age,f_75over_no,B27001_057,Female 75 years and over without health insurance coverage
-acs census,Estimate!!Total:,total_poverty_status,,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
+acs census,Estimate!!Total:,total_poverty_status,B17001_001,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
 acs census,Estimate!!Total:!!Income in the past 12 months below poverty level:,below_poverty,B17001_002,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
 acs census,Estimate!!Total:!!Income in the past 12 months at or above poverty level:,at_above_poverty,B17001_031,POVERTY STATUS IN THE PAST 12 MONTHS BY SEX BY AGE
