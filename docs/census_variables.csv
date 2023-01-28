@@ -10,7 +10,6 @@ decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
 decennial census,Hispanic origin,all,P2_003N,Not Hispanic
-<<<<<<< HEAD,,,,
 ASC 5,Citizenship,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
 ASC 5,Citizenship,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
 ASC 5,Citizenship,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
@@ -74,5 +73,3 @@ ACS 5,Health insurance,nolabor_insured,B27011_014,"health insurance status by em
 ACS 5,Health insurance,nolabor_uninsured,B27011_017,"health insurance status by employment status, not in labor force and not insured"
 ACS 5,Sex,all_male,B05003_002,all male. _003-_0012 provide informatrion on citizenship status and nativity along with sex information if needed.
 ACS 5,Sex,all_female,B05003_013,all female.  _0013-_0023 provide informatrion on citizenship status and nativity along with sex information if needed.
-=======,,,,
->>>>>>> 472b4b795ed507b5a0f7241a8351096464f7ce33,,,,
