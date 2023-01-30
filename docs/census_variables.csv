@@ -9,7 +9,7 @@ decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
 decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
 decennial census,Hispanic origin,hisp,P2_002N,Hispanic
-decennial census,Hispanic origin,all,P2_003N,Not Hispanic
+decennial census,Hispanic origin,not_hisp,P2_003N,Not Hispanic
 ASC 5,Citizenship,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
 ASC 5,Citizenship,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
 ASC 5,Citizenship,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
@@ -31,28 +31,28 @@ acs census,Income,income_100_125k,B19001_0014,"Total $100,000 to $124,999 (House
 acs census,Income,income_125_150k,B19001_0015,"Total $125,000 to $149,999 (Household income in the past 12 months)"
 acs census,Income,income_150_200k,B19001_0016,"Total $150,000 to $199,999 (Household income in the past 12 months)"
 acs census,Income,income_200k,B19001_0017,"Total $200,000 or more (Household income in the past 12 months)"
-acs census,Education,edu_nursery,B15003_003,Total Nursery school (Educational attainment for the population 25 years and over)
+acs census,Education,edu_nursery,B15003_003,Total NurseryÂ school (Educational attainment for the population 25 years and over)
 acs census,Education,edu_kindergarten,B15003_004,Total Kindergarten (Educational attainment for the population 25 years and over)
-acs census,Education,edu_first,B15003_005,Total 1st grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_sec,B15003_006,Total 2nd grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_third,B15003_007,Total 3rd grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_fourth,B15003_008,Total 4th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_fifth,B15003_009,Total 5th grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_first,B15003_005,Total 1stÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_sec,B15003_006,Total 2ndÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_third,B15003_007,Total 3rdÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_fourth,B15003_008,Total 4thÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_fifth,B15003_009,Total 5thÂ grade (Educational attainment for the population 25 years and over)
 acs census,Education,edu_six,B15003_010,Total 6th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_seven,B15003_011,Total 7th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_eight,B15003_012,Total 8th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_nine,B15003_013,Total 9th grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_seven,B15003_011,Total 7thÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_eight,B15003_012,Total 8thÂ grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_nine,B15003_013,Total 9thÂ grade (Educational attainment for the population 25 years and over)
 acs census,Education,edu_ten,B15003_014,Total 10th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_eleven,B15003_015,Total 11th grade (Educational attainment for the population 25 years and over)
+acs census,Education,edu_eleven,B15003_015,Total 11thÂ grade (Educational attainment for the population 25 years and over)
 acs census,Education,edu_twelve,B15003_016,Total 12th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_hs,B15003_017,Total Regular high school diploma (Educational attainment for the population 25 years and over)
-acs census,Education,edu_ged,B15003_018,GED or alternative credential (Educational attainment for the population 25 years and over)
-acs census,Education,edu_onecollege,B15003_019,"some college, less than 1 year (Educational attainment for the population 25 years and over)"
-acs census,Education,edu_college,B15003_020,"some college, 1 or more years no degree(Educational attainment for the population 25 years and over)"
+acs census,Education,edu_hs,B15003_017,Total RegularÂ high school diploma (Educational attainment for the population 25 years and over)
+acs census,Education,edu_ged,B15003_018,GED orÂ alternativeÂ credential (Educational attainment for the population 25 years and over)
+acs census,Education,edu_onecollege,B15003_019,"someÂ college,Â lessÂ thanÂ 1Â year (Educational attainment for the population 25 years and over)"
+acs census,Education,edu_college,B15003_020,"someÂ college,Â 1Â orÂ more yearsÂ noÂ degree(Educational attainment for the population 25 years and over)"
 acs census,Education,edu_assoc,B15003_021, Associate's degree (Educational attainment for the population 25 years and over)
-acs census,Education,edu_bach,B15003_022,Bachelor's degree (Educational attainment for the population 25 years and over)
-acs census,Education,edu_master,B15003_023,Master's degree (Educational attainment for the population 25 years and over) 
-acs census,Education,edu_prof,B15003_024,Professional school degree (Educational attainment for the population 25 years and over)
+acs census,Education,edu_bach,B15003_022,Bachelor'sÂ degree (Educational attainment for the population 25 years and over)
+acs census,Education,edu_master,B15003_023,Master'sÂ degree (Educational attainment for the population 25 years and over) 
+acs census,Education,edu_prof,B15003_024,ProfessionalÂ schoolÂ degree (Educational attainment for the population 25 years and over)
 acs census,Education,edu_doc,B15003_025,Doctorate degree (Educational attainment for the population 25 years and over)
 ASC 5,Transportation,transpo_car,B08406_002,"transportation to work using car, truck or van"
 ASC 5,Transportation,tranpo_public,B08406_008,public transportation to work excluding taxicab
