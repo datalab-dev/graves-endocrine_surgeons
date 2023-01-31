@@ -23,14 +23,14 @@ acs census,Income,income_25_30k,B19001_006,"Total $25,000 to $29,999 (Household 
 acs census,Income,income_30_35k,B19001_007,"Total $30,000 to $34,999 (Household income in the past 12 months)"
 acs census,Income,income_35_40k,B19001_008,"Total $35,000 to $39,999 (Household income in the past 12 months)"
 acs census,Income,income_40_45k,B19001_009,"Total $40,000 to $44,999 (Household income in the past 12 months)"
-acs census,Income,income_45_50k,B19001_0010,"Total $45,000 to $49,999 (Household income in the past 12 months)"
-acs census,Income,income_50_60k,B19001_0011,"Total $50,000 to $59,999 (Household income in the past 12 months)"
-acs census,Income,income_60_75k,B19001_0012,"Total $60,000 to $74,999 (Household income in the past 12 months)"
-acs census,Income,income_75_100k,B19001_0013,"Total $75,000 to $99,999 (Household income in the past 12 months)"
-acs census,Income,income_100_125k,B19001_0014,"Total $100,000 to $124,999 (Household income in the past 12 months)"
-acs census,Income,income_125_150k,B19001_0015,"Total $125,000 to $149,999 (Household income in the past 12 months)"
-acs census,Income,income_150_200k,B19001_0016,"Total $150,000 to $199,999 (Household income in the past 12 months)"
-acs census,Income,income_200k,B19001_0017,"Total $200,000 or more (Household income in the past 12 months)"
+acs census,Income,income_45_50k,B19001_010,"Total $45,000 to $49,999 (Household income in the past 12 months)"
+acs census,Income,income_50_60k,B19001_011,"Total $50,000 to $59,999 (Household income in the past 12 months)"
+acs census,Income,income_60_75k,B19001_012,"Total $60,000 to $74,999 (Household income in the past 12 months)"
+acs census,Income,income_75_100k,B19001_013,"Total $75,000 to $99,999 (Household income in the past 12 months)"
+acs census,Income,income_100_125k,B19001_014,"Total $100,000 to $124,999 (Household income in the past 12 months)"
+acs census,Income,income_125_150k,B19001_015,"Total $125,000 to $149,999 (Household income in the past 12 months)"
+acs census,Income,income_150_200k,B19001_016,"Total $150,000 to $199,999 (Household income in the past 12 months)"
+acs census,Income,income_200k,B19001_017,"Total $200,000 or more (Household income in the past 12 months)"
 acs census,Education,edu_nursery,B15003_003,Total Nursery school (Educational attainment for the population 25 years and over)
 acs census,Education,edu_kindergarten,B15003_004,Total Kindergarten (Educational attainment for the population 25 years and over)
 acs census,Education,edu_first,B15003_005,Total 1st grade (Educational attainment for the population 25 years and over)
@@ -71,5 +71,5 @@ ACS 5,Health insurance,employed_uninsured,B27011_007,"health insurance status by
 ACS 5,Health insurance,unemployed_insured,B27011_009,"health insurance status by employment status, unemployed and insured"
 ACS 5,Health insurance,nolabor_insured,B27011_014,"health insurance status by employment status, not in labor force and insured"
 ACS 5,Health insurance,nolabor_uninsured,B27011_017,"health insurance status by employment status, not in labor force and not insured"
-ACS 5,Sex,all_male,B05003_002,all male. _003-_0012 provide informatrion on citizenship status and nativity along with sex information if needed.
-ACS 5,Sex,all_female,B05003_013,all female.  _0013-_0023 provide informatrion on citizenship status and nativity along with sex information if needed.
+ACS 5,Sex,all_male,B05003_002,all male. _003-_012 provide informatrion on citizenship status and nativity along with sex information if needed.
+ACS 5,Sex,all_female,B05003_013,all female.  _013-_023 provide informatrion on citizenship status and nativity along with sex information if needed.
