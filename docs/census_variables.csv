@@ -8,8 +8,8 @@ decennial census,Race,asian,P2_008N,Asian
 decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
 decennial census,Race,other,P2_010N,Some Other Race
 decennial census,Race,multi,P2_011N,Two or More Races
-decennial census,Hispanic origin,hisp,P2_002N,Hispanic
-decennial census,Hispanic origin,not_hisp,P2_003N,Not Hispanic
+decennial census,Hispanic origin,hisp_y,P2_002N,Hispanic
+decennial census,Hispanic origin,hisp_n,P2_003N,Not Hispanic
 ASC 5,Citizenship,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
 ASC 5,Citizenship,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
 ASC 5,Citizenship,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
