@@ -54,12 +54,12 @@ acs census,Education,edu_bach,B15003_022,Bachelor's degree (Educational attainm
 acs census,Education,edu_master,B15003_023,Master's degree (Educational attainment for the population 25 years and over) 
 acs census,Education,edu_prof,B15003_024,Professional school degree (Educational attainment for the population 25 years and over)
 acs census,Education,edu_doc,B15003_025,Doctorate degree (Educational attainment for the population 25 years and over)
-ASC 5,Transportation,transpo_car,B08406_002,"transportation to work using car, truck or van"
-ASC 5,Transportation,tranpo_public,B08406_008,public transportation to work excluding taxicab
-ASC 5,Transportation,transpo_bike,B08406_014,tranportation to work biking
-ASC 5,Transportation,transpo_walk,B08406_015,transportation to work walking
-ASC 5,Transportation,transpo_taxi_motorcycle_other,B08406_016,"transportation to work taxicab, motorcycle, or other means"
-ASC 5,Transportation,transpo_home,B08406_017,"transportation to work - none, worked from home"
+ASC 5,Transportation,transpo_alone,B08101_009,"transportation to work using car, truck or van - drove alone"
+ASC 5,Transportation,transpo_carpool,B08101_017,"transportation to work using car, truck or van - carpooled"
+ASC 5,Transportation,tranpo_public,B08101_025,public transportation to work excluding taxicab
+ASC 5,Transportation,transpo_walk,B08101_033,tranportation to work walking
+ASC 5,Transportation,transpo_other,B08101_041,"transportation to work taxicab, motorcycle, bicycle, or other means"
+ASC 5,Transportation,transpo_home,B08101_049,"transportation to work - none, worked from home"
 ASC 5,Employement Status,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)"
 ASC 5,Employement Status,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)"
 ASC 5,Employement Status,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account)
