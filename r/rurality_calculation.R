@@ -48,3 +48,29 @@ grep(pattern="^01003", x=tract_data$GEOID)
 
 # when only a county (CTY FIPS) is listed, mark every census tract that starts with that FIPS code
 
+# rural_tract<-matrix(
+#   nrow=length(FORHP_rural_designation$CT),
+#   ncol=1,
+#   dimnames = list(c("rural_tract"),
+#                   c(1:length(FORHP_rural_designation$CT)))
+#   )
+
+# add a column to the tract data to hold the rural designation.
+# 0 = not rural
+# 1 = rural
+tract_data$rural_tract<-0
+
+for (i in 1:length(FORHP_rural_designation$CT)){
+  #print(FORHP_rural_designation$CT[i])
+  if (is.na(FORHP_rural_designation$CT[i])==FALSE){
+    print("contains census tract")
+  }else{print("use county FIPS")}
+}
+
+
+
+
+
+
+
+
