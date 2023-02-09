@@ -14,7 +14,7 @@ census_api_key(api_key)
 
 # Prepare Data -----------------------------------------------------------
 
-#read the FORHP rural designations table
+#read the FORHP rural designations table - identifies tracts that are designated as rural
 FORHP_rural_designation<-read_xlsx("./data/rural_areas/non-metro-counties-cts.xlsx")
 
 #if you want to see all the variables available from the census
@@ -37,3 +37,14 @@ tract_data<-get_acs(
   key=api_key, 
   state=all_fips,
   geometry= TRUE)
+
+
+# Match the Tracts Listed as Rural ----------------------------------------
+
+# an example of getting all the tracts that start with the county FIPS code for Baldwin County, AL
+grep(pattern="^01003", x=tract_data$GEOID)
+
+# when a specific tract (CT) is listed, mark that in the tracts vector data
+
+# when only a county (CTY FIPS) is listed, mark every census tract that starts with that FIPS code
+
