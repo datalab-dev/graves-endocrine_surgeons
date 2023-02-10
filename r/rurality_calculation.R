@@ -61,14 +61,25 @@ grep(pattern="^01003", x=tract_data$GEOID)
 tract_data$rural_tract<-0
 
 for (i in 1:length(FORHP_rural_designation$CT)){
+  
   #print(FORHP_rural_designation$CT[i])
-  if (is.na(FORHP_rural_designation$CT[i])==FALSE){
-    print("contains census tract")
-  }else{print("use county FIPS")}
+  if (is.na(FORHP_rural_designation$CT[i])==FALSE){ #if the CT column has something in it...
+    tract_data$rural_tract[i]<-1 #put a 1 in the rural_tract column (i.e. it's a rural tract)
+    
+  }else{ #if the CT column is empty (has an NA), then...
+    #NOTE: the US Territories like Guam and American Samoa have NA in both columns
+    search_FIPS<-paste0("^", FORHP_rural_designation$`CTY FIPS`[i]) #^ in front of the FIPS code means it should match the GEOIDS with that set of numbers at the front (not anywhere)
+    tract_data$rural_tract[grep(pattern=search_FIPS, x=tract_data$GEOID)]<-1 #put a 1 in the rural_tract column if the GEOID starts with the country FIPS code we want
+    }
 }
 
+st_write(tract_data, "./data/rural_areas_2010.gpkg", overwrite=TRUE)
 
-
+plot(
+  tract_data["rural_tract"], border="transparent"
+  # xlim = st_bbox(usa)[c(1,3)], 
+  # ylim = st_bbox(usa)[c(2,4)]
+)
 
 
 
