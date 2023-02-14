@@ -31,15 +31,21 @@ all_fips<-c(1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23,
 
 # download the tract geometries with the population (because we need to pick some variable to get the geometries)
 # note that the TIGER Census site does not have the 2010 tract geometries to download for the whole county, so we're getting them from tidycensus.
-tract_data<-get_acs(
-  geography="tract", 
-  survey="acs5", 
-  year = 2010,
-  variable=c(population ="B01003_001"), 
-  key=api_key, 
-  state=all_fips,
-  geometry= TRUE)
 
+# load the data the first time
+# tract_data<-get_acs(
+#   geography="tract",
+#   survey="acs5",
+#   year = 2010,
+#   variable=c(population ="B01003_001"),
+#   key=api_key,
+#   state=all_fips,
+#   geometry= TRUE)
+# 
+# saveRDS(object=tract_data, file="./data/tracts_2010.rds")
+
+# load saved data
+tract_data<-readRDS(file="./data/tracts_2010.rds")
 
 # Match the Tracts Listed as Rural ----------------------------------------
 # when a specific tract (CT) is listed, mark that in the tracts vector data
@@ -68,12 +74,19 @@ for (i in 1:length(FORHP_rural_designation$CT)){
     }
 }
 
-dissolved_rural<-st_union(tract_data[which(tract_data$rural_tract==1)])
+# dissolve the polygons to make regions that are rural and not rural instead of all the census tracts
+#NOTE: the dplyr approach of usingpolygon_data %>% group_by() %>% summarise() is too computationally intensive and crashes computers with all of the census data.
+#NOTE: nothing worked. It all bogs down the computer and crashes it. SO! The solution is to write the tract_data to a file, open it in QGIS, then dissolve it based on the rural_tract column. R is just not set up to do this kind of work yet.
 
-dissolved_not_rural<-st_union(tract_data[which(tract_data$rural_tract==0)])
+# rural_polygons<-tract_data[which(tract_data$rural_tract==1),]
+# 
+# dissolved_rural<-st_union(rural_polygons)
+# 
+# dissolved_not_rural<-st_union(tract_data[which(tract_data$rural_tract==0),])
 
 st_write(tract_data, "./data/rural_areas_2010.gpkg", append=FALSE) #append=FALSE allows overwriting any exisiting file
 
+# plot it to see the result
 plot(
   tract_data["rural_tract"], border="transparent"
   # xlim = st_bbox(usa)[c(1,3)], 
