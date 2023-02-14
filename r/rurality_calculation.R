@@ -94,6 +94,20 @@ plot(
 )
 
 
+# Analysis ----------------------------------------------------------------
+
+
+
+rural_polygons<-st_cast(st_read("./data/rural_areas_2010.gpkg", layer="rural_areas_2010_dissolved"), "POLYGON")
+
+rural_polygons<-
+  st_read("./data/rural_areas_2010.gpkg", layer="rural_areas_2010_dissolved") %>% 
+  st_cast("POLYGON") %>% 
+  st_make_valid()
+
+#QGIS made a bunch of lines and little polygons (because topology wasn't enforced?). How do we get rid of them?
+
+boxplot(st_area(rural_polygons))
 
 
 
