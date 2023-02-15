@@ -6,13 +6,8 @@ library(stringr)
 library(tidycensus)
 library(tidyverse)
 
-<<<<<<< Updated upstream
-census_api_key("api_key.txt", install = TRUE)
-load_variables(2020, "acs5", cache=TRUE)
-=======
 census_api_key("API KEY", install = TRUE)
 acs <- load_variables(2020, "acs5", cache=TRUE)
->>>>>>> Stashed changes
 load_variables(2020, "pl")
 
 ##### Tidycensus section
@@ -79,7 +74,7 @@ path <- "~/git/graves-endocrine_surgeons"
 setwd(path)
 
 # Use function to pull population data from the tidycensus package
-csv <- "census_variables.csv"
+csv <- "docs/census_variables.csv"
 census_df <- read_census_variable_csv(csv) 
 
 # Read chosen census variable from csv to create vector for arranging the final table in order 
@@ -90,15 +85,14 @@ var_order <- names(var)
 
 ##### Isochrone section
 # List isochrone files from directory
-files <- list.files("data/", pattern="*.gpkg", full.names=TRUE)
+files <- list.files("data/gpkg/", pattern="*.gpkg", full.names=TRUE)
 
 # Format attribute table from each isochrone file to its own data frame within a large list 'ldf'
 ldf <- lapply(files, st_read) # read files to ldf 
 
 # Filename saved to to name future data frames within a list 
-filenames <- list.files("data/", pattern="*.gpkg", full.names=FALSE)
+filenames <- list.files("data/gpkg/", pattern="*.gpkg", full.names=FALSE)
 
-##### Table joining
 # Left join census income table to tracts table where each isochrone (inside & ouside) is a list within the join_list
 join_list <- list()
 for (i in 1:length(ldf)){
