@@ -12,7 +12,6 @@ load_variables(2020, "pl")
 
 ##### Tidycensus section
 # Function to read csv of census variables and search population data of the census variables in tidycensus 
-# Removed geometry to decrease run time 
 read_census_variable_csv <- function(x) {
   
   census_var <- read.csv(x) # Read csv
@@ -188,6 +187,7 @@ for (i in 1:length(join_list)){
   estimate_list_geometry[[name]] <- variable_tract
 }
 
+### Vector dataset section
 # Function to reshape each data frame within 'estimate_list_geometry'
 reshape <- function(df) {
   # Group by GEOID and variable and sum the variable_population column
