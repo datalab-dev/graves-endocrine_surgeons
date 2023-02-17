@@ -6,8 +6,8 @@
 # Libraries
 library(tidycensus)
 library(readxl)
-library(sf)
 library(dplyr)
+library(sf)
 
 
 # API Access
@@ -96,18 +96,28 @@ plot(
 
 # Analysis ----------------------------------------------------------------
 
+#isolate the non-rural polygons, pick a better projection, buffer them, then dissolve them
+
+proj4_albers<-"+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" #USGS's Albers Equal Area projection for North America
+
+nonrural<-tract_data %>% 
+  subset(rural_tract==0) %>% #get the non-rural polygons
+  st_transform(proj4string=proj4_albers) %>%  #reproject it 
+  #st_union() still crashes R even with fewer polygons
+  mutate(tract_area=st_area(geometry))  %>%  
+  filter(tract_area > units::set_units(0, "m^2")) #remove the polygons with an area of zero
+  %>%   st_union() #dissolve the adjacent tracts into one polygon
+  
 
 
-rural_polygons<-st_cast(st_read("./data/rural_areas_2010.gpkg", layer="rural_areas_2010_dissolved"), "POLYGON")
 
-rural_polygons<-
-  st_read("./data/rural_areas_2010.gpkg", layer="rural_areas_2010_dissolved") %>% 
-  st_cast("POLYGON") %>% 
-  st_make_valid()
 
-#QGIS made a bunch of lines and little polygons (because topology wasn't enforced?). How do we get rid of them?
 
-boxplot(st_area(rural_polygons))
+
+
+
+
+
 
 
 
