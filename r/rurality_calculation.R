@@ -94,7 +94,7 @@ plot(
 )
 
 
-# Analysis ----------------------------------------------------------------
+# Define the Non-Rural Areas ----------------------------------------------------------------
 
 #isolate the non-rural polygons, pick a better projection, buffer them, then dissolve them
 
@@ -110,6 +110,12 @@ nonrural<-tract_data %>%
   
 
 
+# Spatial Analysis --------------------------------------------------------
+
+# Where do the isochrones coincide with the rural areas?
+
+# read in the isochrones
+data_files<-list.files("./data/isochrones_tracts", pattern=".gpkg")
 
 
 
