@@ -6,7 +6,7 @@ library(stringr)
 library(tidycensus)
 library(tidyverse)
 
-census_api_key("API KEY", install = TRUE)
+census_api_key("api_key.txt", install = TRUE)
 acs <- load_variables(2020, "acs5", cache=TRUE)
 load_variables(2020, "pl")
 
