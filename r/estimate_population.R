@@ -74,7 +74,16 @@ setwd(path)
 
 # Use function to pull population data from the tidycensus package
 csv <- "docs/census_variables.csv"
-census_df <- read_census_variable_csv(csv) 
+census_df <- read_census_variable_csv(csv) # don't run if using csv
+
+########
+# recommend to save census_df as csv
+#write.csv(census_df, paste0(path,"/data/census_df.csv"), row.names=FALSE)
+
+# read saved csv to bypass tidy census function 
+#read.csv("data/census_df.csv") 
+#census_df$GEOID <- paste0("0", census_df$GEOID)
+#######
 
 # Read chosen census variable from csv to create vector for arranging the final table in order 
 census_var <- read.csv(csv)
@@ -174,37 +183,41 @@ isochrone_90 <- isochrone_90 %>%
 isochrone_60 <- isochrone_60 %>% 
   arrange(factor(variable, levels = var_order))
 
-# List with estimated population for each variable (including geometries)
-estimate_list_geometry <- list()
-for (i in 1:length(join_list)){
+##### Vector dataset section
+pop_tract_list <- list()
+for (i in 1:length(estimate_list)) {
   
-  # Subset out important columns from the join_list data frames 
-  variable_tract <- data.frame(GEOID = join_list[[i]]$GEOID, # tract ID 
-                               variable = join_list[[i]]$variable.y, # name of census variable
-                               variable_population_estimate = join_list[[i]][,8]*join_list[[i]]$value,
-                               geometry = join_list[[i]]$geom)
+  # Group by GEOID and variable and sum the variable_population column
+  df_grouped <- estimate_list[[i]] %>% 
+    group_by(GEOID, variable) %>% 
+    summarise(total_population = sum(variable_population_estimate), 
+              .groups = 'drop') 
+  
   name <- filenames[[i]]
-  estimate_list_geometry[[name]] <- variable_tract
+  pop_tract_list[[name]] <- df_grouped
 }
 
-### Vector dataset section
-# Function to reshape each data frame within 'estimate_list_geometry'
-reshape <- function(df) {
-  # Group by GEOID and variable and sum the variable_population column
-  df_grouped <- df %>% 
-    group_by(GEOID, variable) %>% 
-    summarise(total_population = sum(variable_population_estimate),
-              geometry = first(geometry)) # geometry is the same for the same GEOID
+pop_reshape_list <- list()
+for (i in 1:length(pop_tract_list)) {
   
   # Reshape the data frame so each variable has its own column
-  df_reshaped <- df_grouped %>% 
-    spread(key = variable, value = total_population)
+  df_reshaped <- pop_tract_list[[i]] %>% 
+    pivot_wider(names_from = variable, values_from = total_population)
   
-  return(df_reshaped)
+  name <- filenames[[i]]
+  pop_reshape_list[[name]] <- df_reshaped
 }
 
-# Apply reshape function to each isochrone in the list
-pop_geom_list <- lapply(estimate_list_geometry, reshape)
+# Add geometry to pop_reshape_list
+# Create list with unique GEOID & geometry for each isochrone & merge geom to pop_reshape_list
+geom_list <- list()
+for (i in 1:length(join_list)) {
+  geom <- join_list[[i]] %>% distinct(GEOID, geom, .keep_all = FALSE)
+  geom <- merge(geom, pop_reshape_list[[i]])
+  
+  name <- filenames[[i]]
+  geom_list[[name]] <- geom
+}
 
 ### FINAL TABLES:
 # A summary table of total populations inside and outside the isochrone boundaries
@@ -213,4 +226,5 @@ isochrone_90
 isochrone_60
 
 # A vector dataset with the spatial data and the attributes, not repeating the geometries, but having a set of values for each polygon
-pop_geom_list
+geom_list
+
