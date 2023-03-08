@@ -239,6 +239,6 @@ for (i in iso_list){
 finish_time<-Sys.time()
 (time_elapsed<-finish_time-start_time)
 
-
+write.csv(access_table, "./data/isochrones_tracts/access_summary.csv")
 
 
