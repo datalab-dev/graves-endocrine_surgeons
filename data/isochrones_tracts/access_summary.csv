@@ -1,0 +1,4 @@
+"","has_access","no_access","isochrone"
+"1",302176666.828296,27648283.1717041,"./data/isochrones_120_min.rds"
+"2",251459046.064738,78365903.9352615,"./data/isochrones_60_min.rds"
+"3",282436964.620887,47387985.3791134,"./data/isochrones_90_min.rds"
