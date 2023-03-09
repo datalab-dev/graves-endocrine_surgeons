@@ -24,7 +24,7 @@ read_census_variable_csv <- function(x) {
   census_df <- data.frame()
   
   # Vector of all states
-  all_fips <- c(1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 
+  all_fips <- c(1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 
                 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 44, 45, 46, 47, 48, 49, 50, 51, 53, 54, 55, 56, 72) #72 is PR
   
   for (i in 1:nrow(census_var)) {
@@ -81,8 +81,8 @@ census_df <- read_census_variable_csv(csv) # don't run if using csv
 #write.csv(census_df, paste0(path,"/data/census_df.csv"), row.names=FALSE)
 
 # read saved csv to bypass tidy census function 
-census_df <- read.csv("data/census_df.csv") 
-census_df$GEOID <- ifelse(nchar(census_df$GEOID) == 10, paste0("0", census_df$GEOID), census_df$GEOID) # add leading 0 if the number has 10 digits
+#census_df <- read.csv("data/census_df.csv") 
+#census_df$GEOID <- ifelse(nchar(census_df$GEOID) == 10, paste0("0", census_df$GEOID), census_df$GEOID) # add leading 0 if the number has 10 digits
 #######
 
 # Read chosen census variable from csv to create vector for arranging the final table in order 
@@ -93,13 +93,13 @@ var_order <- names(var)
 
 ##### Isochrone section
 # List isochrone files from directory
-files <- list.files("data/gpkg/", pattern="*.gpkg", full.names=TRUE)
+files <- list.files("data/isochrone_with_tracts/", pattern="*.gpkg", full.names=TRUE)
 
 # Format attribute table from each isochrone file to its own data frame within a large list 'ldf'
 ldf <- lapply(files, st_read) # read files to ldf 
 
 # Filename saved to to name future data frames within a list 
-filenames <- list.files("data/gpkg/", pattern="*.gpkg", full.names=FALSE)
+filenames <- list.files("data/isochrone_with_tracts/", pattern="*.gpkg", full.names=FALSE)
 
 # Left join census income table to tracts table where each isochrone (inside & ouside) is a list within the join_list
 join_list <- list()
@@ -215,7 +215,7 @@ isochrone_90
 isochrone_60
 
 # write tables to csv
-#write.csv(isochrone_60, "isochrone_60.csv")
+# write.csv(isochrone_60, "isochrone_60.csv")
 
 # A vector dataset with the spatial data and the attributes, not repeating the geometries, but having a set of values for each polygon
 geom_list[[1]]
@@ -226,4 +226,4 @@ geom_list[[5]]
 geom_list[[6]]
 
 # write geom_list to geopackage
-# st_write(geom_list[[6]], "outside_90.gpkg")
+# st_write(geom_list[[5]], "outside_60.gpkg")
