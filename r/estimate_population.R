@@ -224,4 +224,4 @@ geom_list[[5]]
 geom_list[[6]]
 
 # write geom_list to geopackage
-# st_write(geom_list[[5]], "outside_60.gpkg")
+st_write(geom_list[[6]], "data/outside_90.gpkg")
