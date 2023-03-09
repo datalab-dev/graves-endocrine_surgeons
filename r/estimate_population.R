@@ -197,11 +197,9 @@ for (i in 1:length(estimate_list)) {
 
 # Add geometry to pop_reshape_list
 # Create list with unique GEOID & geometry for each isochrone & merge geom to pop_reshape_list
-geom <- join_list[[1]] %>% distinct(GEOID, geom, .keep_all = FALSE)
-
 geom_list <- list()
 for (i in 1:length(join_list)) {
-  geom <- ldf[[i]] %>% distinct(GEOID, geom, .keep_all = FALSE)
+  geom <- join_list[[i]] %>% distinct(GEOID, geom, .keep_all = FALSE)
   geom <- merge(geom, pop_reshape_list[[i]])
   
   name <- filenames[[i]]
