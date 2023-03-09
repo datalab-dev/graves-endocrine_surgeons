@@ -78,7 +78,7 @@ summary_state<-state_table%>% #start with the state_table summary
   left_join(state_fips) %>%  #join the state_fips code table - it will default to the STATE column since both datasets have this column
   select(-c(STATE, STATENS)) #remove the columns we don't need
 
-write.csv(summary_state, "access_summary_by_state_isochrone.csv")
+write.csv(summary_state, "./data/access_summary_by_state_isochrone.csv")
 
 
 
