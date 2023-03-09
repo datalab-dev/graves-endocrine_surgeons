@@ -78,10 +78,10 @@ census_df <- read_census_variable_csv(csv) # don't run if using csv
 
 ########
 # recommend to save census_df as csv
-#write.csv(census_df, paste0(path,"/data/census_df.csv"), row.names=FALSE)
+#write.csv(census_df, paste0(path,"/data/census_analysis_by_tract.csv"), row.names=FALSE)
 
 # read saved csv to bypass tidy census function 
-#census_df <- read.csv("data/census_df.csv") 
+#census_df <- read.csv("data/census_analysis_by_tract.csv") 
 #census_df$GEOID <- ifelse(nchar(census_df$GEOID) == 10, paste0("0", census_df$GEOID), census_df$GEOID) # add leading 0 if the number has 10 digits
 #######
 
