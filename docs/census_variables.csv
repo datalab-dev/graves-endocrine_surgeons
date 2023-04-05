@@ -1,75 +1,75 @@
-Source,Category,column_name,census_variable,description
-decennial census,Race,all,P2_001N,All population data
-decennial census,Race,hisp,P2_002N,Hispanic
-decennial census,Race,white,P2_005N,White
-decennial census,Race,baa,P2_006N,Black or African American
-decennial census,Race,amin,P2_007N,American Indian
-decennial census,Race,asian,P2_008N,Asian
-decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander
-decennial census,Race,other,P2_010N,Some Other Race
-decennial census,Race,multi,P2_011N,Two or More Races
-decennial census,Hispanic origin,hisp_y,P2_002N,Hispanic
-decennial census,Hispanic origin,hisp_n,P2_003N,Not Hispanic
-ASC 5,Citizenship,citizen_bornus,B05001_002,"U.S. citizen, born in the United States"
-ASC 5,Citizenship,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas"
-ASC 5,Citizenship,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)"
-ASC 5,Citizenship,citizen_nature,B05001_005,U.S. citizen by naturalization
-ASC 5,Citizenship,not_citizen,B05001_006,Not a U.S. citizen
-acs census,Income,income_10k,B19001_002,"Total Less than $10,0000 (Household income in the past 12 months) "
-acs census,Income,income_10_15k,B19001_003,"Total $10,000 to $14,999 (Household income in the past 12 months)"
-acs census,Income,income_15_20k,B19001_004,"Total $15,000 to $19,999 (Household income in the past 12 months)"
-acs census,Income,income_20_25k,B19001_005,"Total $20,000 to $24,999 (Household income in the past 12 months)"
-acs census,Income,income_25_30k,B19001_006,"Total $25,000 to $29,999 (Household income in the past 12 months)"
-acs census,Income,income_30_35k,B19001_007,"Total $30,000 to $34,999 (Household income in the past 12 months)"
-acs census,Income,income_35_40k,B19001_008,"Total $35,000 to $39,999 (Household income in the past 12 months)"
-acs census,Income,income_40_45k,B19001_009,"Total $40,000 to $44,999 (Household income in the past 12 months)"
-acs census,Income,income_45_50k,B19001_010,"Total $45,000 to $49,999 (Household income in the past 12 months)"
-acs census,Income,income_50_60k,B19001_011,"Total $50,000 to $59,999 (Household income in the past 12 months)"
-acs census,Income,income_60_75k,B19001_012,"Total $60,000 to $74,999 (Household income in the past 12 months)"
-acs census,Income,income_75_100k,B19001_013,"Total $75,000 to $99,999 (Household income in the past 12 months)"
-acs census,Income,income_100_125k,B19001_014,"Total $100,000 to $124,999 (Household income in the past 12 months)"
-acs census,Income,income_125_150k,B19001_015,"Total $125,000 to $149,999 (Household income in the past 12 months)"
-acs census,Income,income_150_200k,B19001_016,"Total $150,000 to $199,999 (Household income in the past 12 months)"
-acs census,Income,income_200k,B19001_017,"Total $200,000 or more (Household income in the past 12 months)"
-acs census,Education,edu_nursery,B15003_003,Total Nursery school (Educational attainment for the population 25 years and over)
-acs census,Education,edu_kindergarten,B15003_004,Total Kindergarten (Educational attainment for the population 25 years and over)
-acs census,Education,edu_first,B15003_005,Total 1st grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_sec,B15003_006,Total 2nd grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_third,B15003_007,Total 3rd grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_fourth,B15003_008,Total 4th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_fifth,B15003_009,Total 5th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_six,B15003_010,Total 6th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_seven,B15003_011,Total 7th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_eight,B15003_012,Total 8th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_nine,B15003_013,Total 9th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_ten,B15003_014,Total 10th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_eleven,B15003_015,Total 11th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_twelve,B15003_016,Total 12th grade (Educational attainment for the population 25 years and over)
-acs census,Education,edu_hs,B15003_017,Total Regular high school diploma (Educational attainment for the population 25 years and over)
-acs census,Education,edu_ged,B15003_018,GED or alternative credential (Educational attainment for the population 25 years and over)
-acs census,Education,edu_onecollege,B15003_019,"some college, less than 1 year (Educational attainment for the population 25 years and over)"
-acs census,Education,edu_college,B15003_020,"some college, 1 or more years no degree(Educational attainment for the population 25 years and over)"
-acs census,Education,edu_assoc,B15003_021, Associate's degree (Educational attainment for the population 25 years and over)
-acs census,Education,edu_bach,B15003_022,Bachelor's degree (Educational attainment for the population 25 years and over)
-acs census,Education,edu_master,B15003_023,Master's degree (Educational attainment for the population 25 years and over) 
-acs census,Education,edu_prof,B15003_024,Professional school degree (Educational attainment for the population 25 years and over)
-acs census,Education,edu_doc,B15003_025,Doctorate degree (Educational attainment for the population 25 years and over)
-ASC 5,Transportation,transpo_alone,B08101_009,"transportation to work using car, truck or van - drove alone"
-ASC 5,Transportation,transpo_carpool,B08101_017,"transportation to work using car, truck or van - carpooled"
-ASC 5,Transportation,tranpo_public,B08101_025,public transportation to work excluding taxicab
-ASC 5,Transportation,transpo_walk,B08101_033,tranportation to work walking
-ASC 5,Transportation,transpo_other,B08101_041,"transportation to work taxicab, motorcycle, bicycle, or other means"
-ASC 5,Transportation,transpo_home,B08101_049,"transportation to work - none, worked from home"
-ASC 5,Employement Status,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)"
-ASC 5,Employement Status,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)"
-ASC 5,Employement Status,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account)
-ASC 5,Employement Status,inlaborforce,C18120_002,Part of workforce (disability not taken into account)
-ACS 5,Socio-economic Status (SES),below_poverty,B17001_002,poverty status: below poverty rate in past 12 months
-ACS 5,Socio-economic Status (SES),at_above_poverty,B17001_031,poverty status: at or above poverty rate in past 12 months
-ACS 5,Health insurance,employed_insured,B27011_003,"health insurance status by employment status, employed and insured"
-ACS 5,Health insurance,employed_uninsured,B27011_007,"health insurance status by employment status, employed and not insured"
-ACS 5,Health insurance,unemployed_insured,B27011_009,"health insurance status by employment status, unemployed and insured"
-ACS 5,Health insurance,nolabor_insured,B27011_014,"health insurance status by employment status, not in labor force and insured"
-ACS 5,Health insurance,nolabor_uninsured,B27011_017,"health insurance status by employment status, not in labor force and not insured"
-ACS 5,Sex,all_male,B05003_002,all male. _003-_012 provide informatrion on citizenship status and nativity along with sex information if needed.
-ACS 5,Sex,all_female,B05003_013,all female.  _013-_023 provide informatrion on citizenship status and nativity along with sex information if needed.
+Source,Category,column_name,census_variable,description,simple_name
+decennial census,Race,all,P2_001N,All population data,All population data
+decennial census,Race,hisp,P2_002N,Hispanic,Hispanic
+decennial census,Race,white,P2_005N,White,White
+decennial census,Race,baa,P2_006N,Black or African American,Black or African American
+decennial census,Race,amin,P2_007N,American Indian,American Indian
+decennial census,Race,asian,P2_008N,Asian,Asian
+decennial census,Race,nhopi,P2_009N,Native Hawaiian or Pacific Islander,Native Hawaiian or Pacific Islander
+decennial census,Race,other,P2_010N,Some Other Race,Some Other Race
+decennial census,Race,multi,P2_011N,Two or More Races,Two or More Races
+decennial census,Hispanic origin,hisp_y,P2_002N,Hispanic,Hispanic
+decennial census,Hispanic origin,hisp_n,P2_003N,Not Hispanic,Not Hispanic
+ASC 5,Citizenship,citizen_bornus,B05001_002,"U.S. citizen, born in the United States",U.S. Born Citizen
+ASC 5,Citizenship,citizen_puerto_Island,B05001_003,"U.S. citizen, born in Puerto Rico or U.S. Island Areas",Born in Puerto Rico or U.S. Island Areas
+ASC 5,Citizenship,citizen_bornabroad,B05001_004,"U.S. citizen, born abroad of American parent(s)",Born Abroad of American Parent(s)
+ASC 5,Citizenship,citizen_nature,B05001_005,U.S. citizen by naturalization,Naturalized
+ASC 5,Citizenship,not_citizen,B05001_006,Not a U.S. citizen,Not a U.S. citizen
+acs census,Income,income_10k,B19001_002,"Total Less than $10,0000 (Household income in the past 12 months) ","Less than $10,0000"
+acs census,Income,income_10_15k,B19001_003,"Total $10,000 to $14,999 (Household income in the past 12 months)","$10,000 - $14,999"
+acs census,Income,income_15_20k,B19001_004,"Total $15,000 to $19,999 (Household income in the past 12 months)","$15,000 - $19,999"
+acs census,Income,income_20_25k,B19001_005,"Total $20,000 to $24,999 (Household income in the past 12 months)","$20,000 - $24,999"
+acs census,Income,income_25_30k,B19001_006,"Total $25,000 to $29,999 (Household income in the past 12 months)","$25,000 - $29,999"
+acs census,Income,income_30_35k,B19001_007,"Total $30,000 to $34,999 (Household income in the past 12 months)","$30,000 - $34,999"
+acs census,Income,income_35_40k,B19001_008,"Total $35,000 to $39,999 (Household income in the past 12 months)","$35,000 - $39,999"
+acs census,Income,income_40_45k,B19001_009,"Total $40,000 to $44,999 (Household income in the past 12 months)","$40,000 - $44,999 "
+acs census,Income,income_45_50k,B19001_010,"Total $45,000 to $49,999 (Household income in the past 12 months)","$45,000 - $49,999"
+acs census,Income,income_50_60k,B19001_011,"Total $50,000 to $59,999 (Household income in the past 12 months)","$50,000 - $59,999"
+acs census,Income,income_60_75k,B19001_012,"Total $60,000 to $74,999 (Household income in the past 12 months)","$60,000 - $74,999"
+acs census,Income,income_75_100k,B19001_013,"Total $75,000 to $99,999 (Household income in the past 12 months)","$75,000 - $99,999"
+acs census,Income,income_100_125k,B19001_014,"Total $100,000 to $124,999 (Household income in the past 12 months)","$100,000 - $124,999"
+acs census,Income,income_125_150k,B19001_015,"Total $125,000 to $149,999 (Household income in the past 12 months)","$125,000 - $149,999"
+acs census,Income,income_150_200k,B19001_016,"Total $150,000 to $199,999 (Household income in the past 12 months)","$150,000 - $199,999"
+acs census,Income,income_200k,B19001_017,"Total $200,000 or more (Household income in the past 12 months)","$200,000 or More"
+acs census,Education,edu_nursery,B15003_003,Total Nursery school (Educational attainment for the population 25 years and over),Total Nursery
+acs census,Education,edu_kindergarten,B15003_004,Total Kindergarten (Educational attainment for the population 25 years and over),Total Kindergarten
+acs census,Education,edu_first,B15003_005,Total 1st grade (Educational attainment for the population 25 years and over),Total 1st Grade
+acs census,Education,edu_sec,B15003_006,Total 2nd grade (Educational attainment for the population 25 years and over),Total 2nd Grade
+acs census,Education,edu_third,B15003_007,Total 3rd grade (Educational attainment for the population 25 years and over),Total 3rd Grade
+acs census,Education,edu_fourth,B15003_008,Total 4th grade (Educational attainment for the population 25 years and over),Total 4th Grade
+acs census,Education,edu_fifth,B15003_009,Total 5th grade (Educational attainment for the population 25 years and over),Total 5th Grade
+acs census,Education,edu_six,B15003_010,Total 6th grade (Educational attainment for the population 25 years and over),Total 6th Grade
+acs census,Education,edu_seven,B15003_011,Total 7th grade (Educational attainment for the population 25 years and over),Total 7th Grade
+acs census,Education,edu_eight,B15003_012,Total 8th grade (Educational attainment for the population 25 years and over),Total 8th Grade
+acs census,Education,edu_nine,B15003_013,Total 9th grade (Educational attainment for the population 25 years and over),Total 9th Grade
+acs census,Education,edu_ten,B15003_014,Total 10th grade (Educational attainment for the population 25 years and over),Total 10th Grade
+acs census,Education,edu_eleven,B15003_015,Total 11th grade (Educational attainment for the population 25 years and over),Total 11th Grade
+acs census,Education,edu_twelve,B15003_016,Total 12th grade (Educational attainment for the population 25 years and over),Total 12th grade
+acs census,Education,edu_hs,B15003_017,Total Regular high school diploma (Educational attainment for the population 25 years and over),Regular�High School Diploma
+acs census,Education,edu_ged,B15003_018,GED or alternative credential (Educational attainment for the population 25 years and over),GED o Alternative Credential
+acs census,Education,edu_onecollege,B15003_019,"some college, less than 1 year (Educational attainment for the population 25 years and over)","Some College, Less than a Year"
+acs census,Education,edu_college,B15003_020,"some college, 1 or more years no degree(Educational attainment for the population 25 years and over)","Some College, 1 or More Years"
+acs census,Education,edu_assoc,B15003_021, Associate's degree (Educational attainment for the population 25 years and over), Associate's Degree
+acs census,Education,edu_bach,B15003_022,Bachelor's degree (Educational attainment for the population 25 years and over),Bachelor's Degree
+acs census,Education,edu_master,B15003_023,Master's degree (Educational attainment for the population 25 years and over) ,Masters Degree
+acs census,Education,edu_prof,B15003_024,Professional school degree (Educational attainment for the population 25 years and over),Professional School Degree
+acs census,Education,edu_doc,B15003_025,Doctorate degree (Educational attainment for the population 25 years and over),Doctorate degree
+ASC 5,Transportation,transpo_alone,B08101_009,"transportation to work using car, truck or van - drove alone","Car, Truck or Van - Drove Alone"
+ASC 5,Transportation,transpo_carpool,B08101_017,"transportation to work using car, truck or van - carpooled","Car, Truck or Van - Carpooled"
+ASC 5,Transportation,tranpo_public,B08101_025,public transportation to work excluding taxicab,Public Transportation Excluding Taxicab
+ASC 5,Transportation,transpo_walk,B08101_033,tranportation to work walking,Walking
+ASC 5,Transportation,transpo_other,B08101_041,"transportation to work taxicab, motorcycle, bicycle, or other means","Taxicab, Motorcycle, Bicycle, or Other Means"
+ASC 5,Transportation,transpo_home,B08101_049,"transportation to work - none, worked from home",Worked from home
+ASC 5,Employement Status,employed,C18120_003,"Employment status: employed, part of workforce (disability not taken into account)",Employed
+ASC 5,Employement Status,unemployed,C18120_006,"Employment status: unemployed, part of workforce (disability not taken into account)",Unemployed
+ASC 5,Employement Status,notinlaborforce,C18120_009,Not part of the  workforce (disability not taken into account),Not part of the Workforce
+ASC 5,Employement Status,inlaborforce,C18120_002,Part of workforce (disability not taken into account),All Part of Workforce
+ACS 5,Socio-economic Status (SES),below_poverty,B17001_002,poverty status: below poverty rate in past 12 months,Below poverty Rate
+ACS 5,Socio-economic Status (SES),at_above_poverty,B17001_031,poverty status: at or above poverty rate in past 12 months,At or Above Poverty Rate
+ACS 5,Health insurance,employed_insured,B27011_003,"health insurance status by employment status, employed and insured",Employed and Insured
+ACS 5,Health insurance,employed_uninsured,B27011_007,"health insurance status by employment status, employed and not insured",Employed and Not Insured
+ACS 5,Health insurance,unemployed_insured,B27011_009,"health insurance status by employment status, unemployed and insured",Unemployed and Insured
+ACS 5,Health insurance,nolabor_insured,B27011_014,"health insurance status by employment status, not in labor force and insured",Not in Labor and Insured
+ACS 5,Health insurance,nolabor_uninsured,B27011_017,"health insurance status by employment status, not in labor force and not insured",Not in Labor and Not Insured
+ACS 5,Sex,all_male,B05003_002,all male. _003-_012 provide informatrion on citizenship status and nativity along with sex information if needed.,All Males
+ACS 5,Sex,all_female,B05003_013,all female.  _013-_023 provide informatrion on citizenship status and nativity along with sex information if needed.,All Females
