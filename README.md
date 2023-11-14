@@ -13,6 +13,10 @@ project.
 This repository contains code for Claire Graves' **Endocrine Surgery Access** project. The
 project uses surgeon address data as well as population, demographic, and socioeconomic data from the US Census to understand the distribution of endocrine surgeons in relation to the US population. The goal of our collaboration is is to better understand the distribution of endocrine surgery centers in the United States and who has access to these centers.  The larger goal of this work is to reduce the barriers for patients to access care requiring an endocrine surgeon.
 
+The research resulting from this collaboration was published in the journal Surgery.  We suggest the following citation:
+
+Maeve M Alterio, Michele Tobias, Arthur Koehl, Alexis L Woods, Kiyomi Sun, Michael J Campbell, Claire E Graves. 2023. [Who Serves Where: A Geospatial Analysis of Access to Endocrine Surgeons in the United States and Puerto Rico](https://www.sciencedirect.com/science/article/pii/S0039606023006712). *Surgery*, Nov. 2023.
+
 ## Collaborators
 
 ### Domain Team
